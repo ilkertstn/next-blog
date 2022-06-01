@@ -35,3 +35,17 @@ html:focus-within {
 .swiper-slide-prev {
   cursor: pointer;
 }
+
+
+.blogdetail{
+  display: flex;
+  flex-direction: column;
+
+  p{
+    font-family: Roboto;
+    color:pink;
+  }
+  img{
+    display: flex;
+  }
+}

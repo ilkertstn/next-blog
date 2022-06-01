@@ -8,8 +8,11 @@ import Store from "@components/Store";
 import BigStore from "@components/BigStore";
 import Image from "next/image";
 import {BlogData} from "@lib/blog";
+import { useRouter } from "next/router";
+import Link from 'next/link';
 
 const Blog = () => {
+  const router= useRouter();
   const secondPost = BlogData[2];
 
   return (
@@ -25,6 +28,7 @@ const Blog = () => {
       </div>
       <div className="container">
         <div className="flex justify-start pt-40 tablet:pt-12 mt-[-120px] pl-0 tablet:pl-10 pb-16">
+          <Link passHref href={`/blog/${secondPost.slug}`}>
           <BigCard
             title={secondPost.title}
             time={` ${secondPost.time} ago`}
@@ -32,7 +36,9 @@ const Blog = () => {
             body={secondPost.description}
             read="Read Story"
             image={secondPost.image}
+            
           />
+          </Link>
         </div>
         <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center   ">
        {BlogData.slice(2).map((blog,index)=>(

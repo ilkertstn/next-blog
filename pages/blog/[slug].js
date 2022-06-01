@@ -10,17 +10,27 @@ import BigStore from "@components/BigStore";
 import { BlogData } from "@lib/blog";
 import { BlogMiniPostData } from "@lib/blogMiniPost";
 import { PostCardData } from "@lib/postCard";
+import { useRouter } from 'next/router'
+
 
 const BlogDetail = () => {
   const firstPost = BlogData[0];
 
+  const router = useRouter();
+
+  const {slug} = router.query;
+const selectedBlog = BlogData.find((item) => item.slug === slug);
+
+console.log('selected blog',selectedBlog.content);
 
   return (
     <div className="flex flex-col">
-      <div className="bg-grey h-[460px]">
+         <div className="bg-grey h-[460px]">
         <Navbar />
+        <div className="blogdetail min-h-[70vh] bg-white" dangerouslySetInnerHTML={{__html: selectedBlog?.content}}/>
+     
 
-        <div className="laptop:pt-[40px]">
+        {/* <div className="laptop:pt-[40px]">
           <Title
             title={firstPost.title}
             design="Design"
@@ -38,7 +48,7 @@ const BlogDetail = () => {
             name={`By ${firstPost.author} `}
           />
         </div>
-        <div className="flex flex-col container tablet:w-[750px] pt-10   tablet:pt-18  ">
+        <div  className="flex flex-col container tablet:w-[750px] pt-10   tablet:pt-18  ">
           <div className="flex w-full tablet:min-h-[auto] tablet:w-[full] tablet:justify-center relative h-[300px]">
             <Image
               className="rounded-2xl"
@@ -151,6 +161,8 @@ const BlogDetail = () => {
           <Store />
         </div>
         <BigStore />
+      </div> */}
+          <BigStore />
       </div>
     </div>
   );
