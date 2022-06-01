@@ -1,0 +1,375 @@
+.image_overflow {
+  @media (min-width: 1160px) {
+    width: calc(100% + calc((100vw - 1128px) / 2));
+    max-height: 652px;
+    overflow: hidden;
+  }
+
+  &.hnh_video_overflow {
+    min-height: 52vh;
+    @media (min-width: 1160px) {
+      min-height: 420px;
+      & > .video_wrap_div {
+        width: calc(100% + (100vw - 1128px) / 2) !important;
+      }
+    }
+  }
+}
+
+.large__slider {
+  .swiper-slide-active {
+    .large_carousel_img_button {
+      display: flex !important;
+    }
+  }
+}
+
+#__next {
+  main {
+    min-height: 100vh;
+    // overflow-x: hidden;
+  }
+}
+
+.line_clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+
+  &-1 {
+    -webkit-line-clamp: 1;
+  }
+  &-2 {
+    -webkit-line-clamp: 2;
+  }
+  &-3 {
+    -webkit-line-clamp: 3;
+  }
+  &-4 {
+    -webkit-line-clamp: 4;
+  }
+  &-5 {
+    -webkit-line-clamp: 5;
+  }
+}
+
+.link_overflow {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+}
+
+.no_underline {
+  text-decoration: none !important;
+}
+
+.nav_mobile_link {
+  text-decoration: none !important;
+  &::after {
+    content: none !important;
+  }
+  & > span {
+    position: relative;
+    &::after {
+      content: "";
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      background: currentColor;
+      transition: width 0.3s ease 0s;
+      width: 0;
+    }
+  }
+
+  &:hover {
+    span:after {
+      width: 100%;
+    }
+  }
+}
+
+.card_link_wrapper {
+  & > a {
+    .shotcard_cta_link {
+      width: fit-content;
+      text-decoration: none !important;
+      position: relative;
+      &::after {
+        content: "";
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        background: currentColor;
+        transition: width 0.3s ease 0s;
+        width: 0;
+      }
+    }
+    &:hover {
+      .shotcard_cta_link:after {
+        width: 100%;
+      }
+    }
+  }
+  .shotcard__category,
+  .shotcard__title,
+  .shotcard__description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+  .shotcard__category {
+    -webkit-line-clamp: 1;
+  }
+  .shotcard__title {
+    -webkit-line-clamp: 1;
+  }
+  .shotcard__description {
+    -webkit-line-clamp: 3;
+  }
+}
+
+.text_wrapper {
+  :last-child {
+    @apply mb-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-roboto text-title-mobile leading-lg tablet:text-h4 mb-4 tablet:mb-10 uppercase;
+  }
+  p {
+    @apply font-roboto text-body-small leading-xl tablet:font-roboto tablet:text-body-copy tablet:leading-xl;
+  }
+
+  &-sm__space {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply mb-6;
+    }
+  }
+}
+
+.contact_us_title_wrapper {
+  :last-child {
+    @apply mb-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-roboto text-title-mobile leading-lg tablet:text-h4 uppercase text-center mb-10;
+  }
+  p {
+    @apply font-roboto text-body-small leading-xl tablet:font-roboto tablet:text-body-copy tablet:leading-xl text-center;
+  }
+}
+
+.form_title {
+  p {
+    @apply font-roboto text-title-mobile leading-lg tablet:text-subtitle;
+  }
+}
+
+.footer_copyright {
+  p {
+    @apply font-roboto leading-lg text-[13px];
+  }
+}
+
+.information-horizontal-text {
+  :last-child {
+    @apply mb-0;
+  }
+  margin: 0 auto;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply title-mobile tablet:text-h4 uppercase text-center mb-10;
+  }
+
+  p {
+    @apply headline text-[13px];
+  }
+}
+
+.information-horizontal-text {
+  :last-child {
+    @apply mb-0;
+  }
+  h4,
+  h5,
+  h6 {
+    @apply text-extra-small uppercase text-center mb-[8px] tablet:mb-5 tablet:mt-0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply title-mobile tablet:text-h4 uppercase text-center mb-[32px];
+  }
+
+  p {
+    @apply body-copy;
+  }
+}
+
+.itinerary-text {
+  h4,
+  h5,
+  h6 {
+    @apply extra-small tablet:small mb-4;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply title-mobile tablet:text-h6 mb-[24px] tablet:mb-[32px] max-w-[330px] uppercase;
+  }
+
+  p {
+    @apply body-small  items-start mb-16 tablet:text-body-copy;
+  }
+}
+
+.multi_cta_content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-roboto text-title-mobile leading-lg tablet:text-h6 uppercase text-center;
+  }
+  p {
+    @apply font-roboto text-extra-small leading-lg text-center mb-3;
+  }
+}
+
+.link_animations {
+  text-decoration: none !important;
+  position: relative;
+  &::after {
+    content: "";
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    background: currentColor;
+    transition: width 0.3s ease 0s;
+    width: 0;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &.link_underline {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+.btn {
+  &::after {
+    content: none !important;
+  }
+}
+
+.main {
+  &::after {
+    content: "";
+    background-image: url(/logo/White.svg);
+    background-position: left 16px top 20px;
+    background-repeat: no-repeat;
+    background-size: 190px 16px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    -webkit-animation: fade-in 0.6s ease-in-out 1s both;
+    animation: fade-in 0.6s ease-in-out 1s both;
+    @media (min-width: 1024px) {
+      background-position: center top 16px;
+    }
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 1;
+    z-index: 1000000;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+    z-index: 1000000;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+
+.fade_in_open {
+  -webkit-animation: fade-in 0.3s ease-in-out both;
+  animation: fade-in 0.3s ease-in-out both;
+}
+
+@-webkit-keyframes fade-in_open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in_open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.swiper_slide_card {
+  height: calc(100% - 36px) !important;
+}

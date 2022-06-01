@@ -1,0 +1,23 @@
+@layer components {
+  .btn {
+    @apply p-3 font-roboto extra-small text-[12px] tablet:small tablet:text-[14px] leading-lg cursor-pointer;
+    &-primary {
+      @apply border border-solid border-black transition-colors hover:bg-brown-dark hover:border-grey;
+    }
+    &-primary-white {
+      @apply border border-solid border-white text-white;
+    }
+    &-thredary {
+      @apply border border-solid border-black bg-black text-white;
+    }
+  }
+  .cta_link {
+    @apply font-lexend text-small leading-lg cursor-pointer underline-offset-1 underline;
+    &-small {
+      @apply text-extra-small;
+    }
+  }
+  .nav_link {
+    @apply extra-small laptop:text-[12px] uppercase cursor-pointer underline-offset-1 hover:underline select-none;
+  }
+}

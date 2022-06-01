@@ -1,0 +1,78 @@
+@layer components {
+  .input-primary {
+    @apply rounded-none border-0 border-b border-solid h-[28px] border-b-black pb-1 bg-yellow body-small tablet:font-noir tablet:text-body-copy tablet:leading-xl text-black placeholder-black50 tablet:text-center focus:outline-none w-full;
+
+    &:-webkit-autofill {
+      background-color: #e7c36f !important;
+      -webkit-box-shadow: 0 0 0 50px #e7c36f inset;
+    }
+  }
+}
+.input-secondary {
+  @apply rounded-none border-0 border-b border-solid h-[28px] border-b-black pb-1 bg-[transparent] body-small tablet:font-roboto tablet:text-body-copy tablet:leading-xl text-black placeholder-black focus:outline-none w-full flex-col;
+
+  &:-webkit-autofill {
+    background-color: #e3dbc8 !important;
+    -webkit-box-shadow: 0 0 0 50px #e3dbc8 inset;
+  }
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  height: 20px;
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #504f54;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &.disabled {
+    color: #bfbfbf;
+    cursor: not-allowed;
+  }
+  .checkmark {
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    background: transparent;
+    border: 2px solid rgb(0 0 0 / 50%);
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 8px;
+    border: solid rgb(0 0 0 / 50%);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+  &.error {
+    .checkmark {
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      background: transparent;
+      border: 2px solid #ff453a;
+    }
+  }
+}

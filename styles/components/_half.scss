@@ -1,0 +1,41 @@
+.halfContainer {
+  max-width: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 16px;
+}
+
+$breakpoints: (
+  "sm-mobile": 200px,
+  mobile: 576px,
+  tablet: 768px,
+  laptop: 1024px,
+  "lg-laptop": 1192px,
+  desktop: 1440px,
+  "xl-desktop": 1620px,
+);
+
+
+$container-max-widths: (
+  mobile: 100%,
+  tablet: 488px,
+  laptop: 768px,
+  desktop: 1192px,
+  "xl-desktop": 1192px,
+);
+
+@each $key, $value in $container-max-widths {
+  $min-width: map-get($breakpoints, $key);
+  @if $min-width {
+    @media only screen and (min-width: map-get($breakpoints, $key)) {
+      .halfContainer {
+        margin-left: auto;
+        margin-right: 0;
+        max-width: calc(#{$value} + (100vw - #{$value}) / 2);
+        width: 100%;
+        padding: 0px 0px 0px 16px;
+      }
+    }
+  }
+}
