@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import Image from "next/image";
+import cn from 'classnames';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="p-8 tablet:p-10 tablet:bg-grey shadow tablet:flex tablet:items-center tablet:justify-center  ">
+      <nav className={cn(!open ? "bg-grey" : "bg-white","p-8 tablet:p-10 tablet:shadow tablet:flex tablet:items-center tablet:justify-center")}>
         <div className="flex flex-row justify-between items-center ">
           <span className="h5 font-pacifico cursor-pointer ">TASTAN</span>
           <span
