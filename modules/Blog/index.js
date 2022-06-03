@@ -61,11 +61,7 @@ console.log(BlogData)
         </div>
       </div>
 
-       <div className="pt-18 text-center ">
-        <button className="font-roboto font-bold border-0 text-blackChange bg-grey rounded-xl w-[210px] h-15 pt-1 ">
-          Previous Posts
-        </button>
-      </div>
+       
       <div className="pt-10">
    
       <BigStore /> 

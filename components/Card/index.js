@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 const Card = ({ title, time, body, read, image,slug }) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col h-auto p-0 mb-10 tablet:p-10 tablet:mb-0 justify-start items-center w-[100%] tablet:w-[19%]  basis-1/3 ">
-      <div className="w-full h-[300px] relative drop-shadow-2xl hover:scale-105 easin duration-300 ">
+    <div className="flex flex-col h-auto p-0 mb-10 tablet:p-10 tablet:mb-0 justify-start items-center w-[100%] tablet:w-[50%]  basis-1/3 ">
+      <div onClick={()=>router.push(`/blog/${slug}`)} className="w-full h-[300px] relative drop-shadow-2xl hover:scale-105 easin duration-300 cursor-pointer">
         <Image
           className="rounded-xl"
           src={image}

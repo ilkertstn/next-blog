@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AiOutlineMail } from "react-icons/ai";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+
 const BigStore = () => {
   const [data, setData] = useState({
     email: "",
@@ -18,76 +22,67 @@ const BigStore = () => {
   };
 
   return (
-    <div className="bg-blackChange max-w-screen-md tablet:h-[1300px]">
-      <div className="flex flex-col text-center pt-80">
-        <div className="text-white font-roboto font-bold h2 w-[100px] tablet:w-full pl-[110px] tablet:pl-0  ">
-          Subscribe Newsletter
+    <div className="bg-blackChange max-w-screen-md tablet:h-[900px]">
+      <div className="flex flex-col text-center pt-10 tablet:pt-20">
+        <div className="text-white font-roboto font-bold h2 w-full tablet:w-full tablet:pl-0  ">
+          <Image
+            className="rounded-full"
+            alt="img"
+            src="/images/ilker.jpg"
+            height={50}
+            width={50}
+          />
+          Ilker Tastan
         </div>
-        <div className="font-roboto text-whiteChange pt-2">
-          Suspendisse tincidunt sapien feliuentum
+        <div className="justifty-center font-roboto text-whiteChange pt-5 ">
+          I create user-friendly websites that your users will love. I&lsquo;m
+          with you from start<br></br> to finish to make sure you achieve your goals and
+          that your users are happy.
         </div>
-        <div className="flex flex-row justify-center pt-10  space-x-12">
-          <form
-            onSubmit={onSubmitHandler}
-            className="flex flex-col tablet:flex-row space-x-0 tablet:space-x-10 space-y-8 tablet:space-y-0"
-          >
-            <input
-              name="email"
-              onChange={onChange}
-              value={email}
-              placeholder="Enter your email address"
-              className="p-4 rounded-2xl text-whiteChange border-[1px] w-[350px] h-[80px] tablet:h-auto border-whiteChange bg-blackChange"
-            ></input>
-            <div>
-              <button className="bg-grey w-[360px] tablet:w-40 h-[90px] tablet:h-[60px] rounded-2xl tablet:rounded-xl font-roboto font-bold">
-                Submit
-              </button>
-            </div>
-          </form>
+        <div>
+        <div className="flex items-center justify-between max-w-[300px] m-auto py-4">
+            <Link passHref href="https://www.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a/">
+          <div className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
+              <FaLinkedinIn />
+          </div>
+          </Link>
+          <Link passHref href="https://github.com/ilkertstn">
+          <div className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
+          <FaGithub />
+          </div>
+          </Link>
+          <div className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer hover:scale-105 ease-in duration-200">
+          <AiOutlineMail />
+          </div>
         </div>
-        <div className="flex justify-center pt-20 ">
+
+        <div className="flex justify-center pt-5 tablet:pt-20 ">
           <hr className="hidden mobile:block text-whiteChange w-[1000px] "></hr>
         </div>
-        <div className="flex flex-col tablet:flex-row pt-0 tablet:pt-44 justify-center tablet:space-x-36">
-          <div className="flex flex-col space-y-0  tablet:space-y-3  ">
-            <Link href="https://petupp.com" passHref>
-              <button className="font-pacifico h4 text-white tablet:self-baseline">
-                TASTAN
-              </button>
-            </Link>
-
-            <div className="flex flex-col pt-5 tablet:space-y-2  ">
-              <button className="font-roboto text-whiteChange  tablet:self-baseline	">
-                hello@onirapp.com
-              </button>
-              <button className="font-roboto text-whiteChange pt-2 tablet:self-baseline	">
-                +1-800-123 4567
-              </button>
-            </div>
-          </div>
+        <div className="flex flex-col tablet:flex-row pt-0 tablet:pt-44 justify-center tablet:space-x-36 " >
           <div className="flex flex-col space-y-7 tablet:space-y-3 ">
             <button className="hidden mobile:block font-roboto font-bold h5 text-white tablet:self-baseline	">
-              Company
+              Quick Links
             </button>
             <div className="flex flex-col pt-2 tablet:pt-5 space-y-0 tablet:space-y-2">
+            <Link href="/blog" passHref>
               <button className="font-roboto text-whiteChange tablet:self-baseline	">
-                About
+                Home
               </button>
+              </Link>
 
               <button className="font-roboto text-whiteChange pt-[18px] tablet:pt-2 tablet:self-baseline">
-                Services
+                About
               </button>
               <button className="font-roboto text-whiteChange pt-[18px] tablet:pt-2 tablet:self-baseline	">
-                Careers
+                Skills
               </button>
               <Link href="/blog" passHref>
                 <button className="font-roboto text-whiteChange pt-[18px] tablet:pt-2 tablet:self-baseline	">
-                  Blog
+                  Contact
                 </button>
               </Link>
-              <button className="font-roboto text-whiteChange pt-[18px] tablet:pt-2 tablet:self-baseline">
-                Pricing
-              </button>
+              
             </div>
           </div>
           <div className="flex flex-col space-y-0 tablet:space-y-3 ">
@@ -96,95 +91,20 @@ const BigStore = () => {
             </button>
             <div className="flex flex-col pt-2 tablet:pt-5  space-y-0 tablet:space-y-2">
               <button className="font-roboto text-whiteChange tablet:self-baseline pt-2 tablet:pt-0 ">
-                Help
+               LinkedIn
               </button>
               <button className="font-roboto text-whiteChange tablet:self-baseline	pt-[18px] tablet:pt-2">
-                FAQs
+                GitHub
               </button>
               <button className="font-roboto text-whiteChange tablet:self-baseline	pt-[18px] tablet:pt-2">
-                Press
+                Mail
               </button>
-              <button className="font-roboto text-whiteChange tablet:self-baseline tablet:w-[140px] pt-[18px] tablet:pt-2	">
-                Terms & Conditions
-              </button>
-              <button className="font-roboto text-whiteChange tablet:self-baseline pt-[18px] tablet:pt-2">
-                Partners
-              </button>
-            </div>
-          </div>
-          <div className="flex flex-col space-y-0 tablet:space-y-5 ">
-            <div className="flex flex-row space-x-5 justify-center tablet:justify-start pt-14 tablet:pt-0">
-              <Link href="https://facebook.com/" passHref>
-                <button>
-                  {" "}
-                  <Image
-                    src="/images/Facebook.png"
-                    alt=""
-                    height={27}
-                    width={27}
-                  ></Image>
-                </button>
-              </Link>
-              <Link href="https://twitter.com/" passHref>
-                <button>
-                  {" "}
-                  <Image
-                    src="/images/Twitter.png"
-                    alt=""
-                    height={27}
-                    width={27}
-                  ></Image>
-                </button>
-              </Link>
-              <Link href="https://www.instagram.com/" passHref>
-                <button>
-                  {" "}
-                  <Image
-                    src="/images/Instagram.png"
-                    alt=""
-                    height={27}
-                    width={27}
-                  ></Image>
-                </button>
-              </Link>
-            </div>
-            <div className="font-roboto text-white tablet:self-baseline pt-[18px] tablet:pt-2 	">
-              Let’s try out!
-            </div>
-            
-            <div className="tablet:flex flex-col space-y-4 pt-[18px] tablet:pt-2">
-              <button className="font-roboto font-bold ">
-                <div className="absolute pl-10 pt-4">
-                  <Image
-                    src="/images/apple.png"
-                    alt=""
-                    height={40}
-                    width={40}
-                  ></Image>
-                </div>
-
-                <div className="border-2 w-[210px] h-[70px] rounded-2xl pl-12 pt-5  bg-white border-none">
-                  App Store
-                </div>
-              </button>
-              <button className="font-roboto font-bold ">
-                <div className="absolute pl-10 pt-4">
-                  <Image
-                    src="/images/android.png"
-                    alt=""
-                    height={40}
-                    width={40}
-                  ></Image>
-                </div>
-
-                <div className="border-2 w-[210px] h-[70px] rounded-2xl pl-12 pt-5 bg-white border-none">
-                  Play Store
-                </div>
-              </button>
+             
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

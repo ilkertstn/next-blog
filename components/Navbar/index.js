@@ -8,10 +8,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const links = [
     "Home",
-    "How It Works",
-    "Features",
-    "Blog",
-    "About Us",
+    "About",
+    "Skills",
     "Contact",
   ];
   const router = useRouter();
@@ -36,7 +34,7 @@ const Navbar = () => {
             </div>
           </span>
           <span
-            className="pt-4 cursor-pointer tablet:hidden block"
+            className="p-4 cursor-pointer tablet:hidden block"
             onClick={() => setOpen(!open)}
           >
             <Image src="/images/bar.png" width={20} height={20} alt="" />
