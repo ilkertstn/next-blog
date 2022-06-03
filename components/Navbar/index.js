@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import cn from "classnames";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -63,16 +64,18 @@ const Navbar = () => {
               Home
             </a>
           </li>
+          <Link passHref href="/about">
           <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
-            <a href="/about" className="">
               About
-            </a>
           </li>
+          </Link>
+          <Link passHref href="/skills">
           <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
-            <a href="/skills" className="">
+            
               Skills
-            </a>
+          
           </li>
+          </Link>
           <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
             <a href="#" className="">
               Contact
