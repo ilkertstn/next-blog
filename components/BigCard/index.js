@@ -4,7 +4,7 @@ import Image from "next/image";
 const BigCard = ({title, body, user, time, read, image }) => {
   return (
     <div className="flex flex-col tablet:flex-row justify-center pt-8 tablet:pt-0 min-h-[300px] " >
-      <div className="flex w-full tablet:min-h-[auto] tablet:w-[500px] tablet:justify-center relative min-h-[300px] hover:scale-105 ease-in duration-300 drop-shadow-2xl">
+      <div className="flex w-full tablet:min-h-[auto] tablet:w-[500px] tablet:justify-center relative min-h-[300px] hover:scale-105 ease-in duration-300 drop-shadow-2xl cursor-pointer">
         <Image
           className="rounded-xl"
           src={image}

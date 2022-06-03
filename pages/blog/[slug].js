@@ -21,15 +21,16 @@ const BlogDetail = () => {
   const {slug} = router.query;
 const selectedBlog = BlogData.find((item) => item.slug === slug);
 
-console.log('selected blog',selectedBlog.content);
+console.log('selected blog',selectedBlog?.content);
 
   return (
     <div className="flex flex-col">
-         <div className="bg-grey h-[460px]">
+         <div className="bg-grey h-[80px]">
         <Navbar />
-        <div className="blogdetail min-h-[70vh] bg-white" dangerouslySetInnerHTML={{__html: selectedBlog?.content}}/>
+        
+        <div className="blogdetail container w-full pt-10 tablet:w-[120vh] min-h-[70vh] bg-white pb-10" dangerouslySetInnerHTML={{__html: selectedBlog?.content}}/>
      
-
+        
         {/* <div className="laptop:pt-[40px]">
           <Title
             title={firstPost.title}

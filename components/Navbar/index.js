@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import Image from "next/image";
-import cn from 'classnames';
+import cn from "classnames";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,14 +13,29 @@ const Navbar = () => {
     "About Us",
     "Contact",
   ];
-
+  const router = useRouter();
   return (
     <div>
-      <nav className={cn(!open ? "bg-grey" : "bg-white","p-8 tablet:p-10 tablet:shadow tablet:flex tablet:items-center tablet:justify-center")}>
-        <div className="flex flex-row justify-between items-center ">
-          <span className="h5 font-pacifico cursor-pointer ">TASTAN</span>
+      <nav
+        className={cn(
+          !open ? "bg-grey" : "bg-white",
+          "p-[30px] tablet:p-10 tablet:shadow tablet:flex justify-between "
+        )}
+      >
+        <div className="flex flex-row justify-between ">
           <span
-            className="pt-2 cursor-pointer tablet:hidden block"
+            onClick={() => router.push("/")}
+            className="h5 font-roboto font-medium cursor-pointer text-blackChange "
+          >
+            <div className="flex">
+              <Image className="rounded-full" alt="img" src="/images/ilker.jpg" height={60} width={60}></Image>
+              <div className="p-3">
+              Ilker Tastan
+              </div>
+            </div>
+          </span>
+          <span
+            className="pt-4 cursor-pointer tablet:hidden block"
             onClick={() => setOpen(!open)}
           >
             <Image src="/images/bar.png" width={20} height={20} alt="" />
@@ -41,30 +56,21 @@ const Navbar = () => {
               </li>
             );
           })}
-          <div className="flex flex-col space-y-3 pl-[20%] pt-8">
-            <button className="border rounded-3xl font-medium h-12 w-44">
-              Login
-            </button>
-            <button className="bg-blue rounded-3xl text-white font-medium h-12 w-44">
-              Sign Up
-            </button>
-          </div>
         </ul>
-        <ul className="tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14 text-body-small font-medium text-center hidden">
+        <ul className="tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium  hidden cursor-pointer uppercase text-blackChange">
           <li className="mx-0  my-6 tablet:my-0 hover:border-b border-blue">
-            <a href="#" className="">
+            <a onClick={() => router.push("/")} className="">
               Home
             </a>
           </li>
           <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
-            <a href="#" className="">
-              Features
+            <a href="/about" className="">
+              About
             </a>
           </li>
-
           <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
-            <a href="#" className="">
-              Blog
+            <a href="/skills" className="">
+              Skills
             </a>
           </li>
           <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
@@ -72,34 +78,7 @@ const Navbar = () => {
               Contact
             </a>
           </li>
-          <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
-            <a href="#" className="">
-              About
-            </a>
-          </li>
-          <li className="text-white tablet:text-black mx-4 my-6 tablet:my-0 hover:border-b border-blue">
-            <a href="#" className="">
-              Login
-            </a>
-          </li>
-          <div className="flex flex-col">
-            <button className="tablet:hidden laptop:hidden mx-4 my-6 tablet:my-0">
-              <a
-                href="#"
-                className="bg-white pl-15 tablet:pl-6 pr-15 tablet:pr-6 pt-3 tablet:pt-2 pb-3 tablet:pb-2 rounded-3xl tablet:rounded-2xl text-black font-roboto font-medium border"
-              >
-                Login
-              </a>
-            </button>
-            <button className="mx-4 my-2 tablet:my-0">
-              <a
-                href="#"
-                className="bg-blue pl-14 tablet:pl-6 pr-14 tablet:pr-6 pt-3 tablet:pt-2 pb-3 tablet:pb-2 rounded-3xl tablet:rounded-2xl text-white font-roboto font-medium   "
-              >
-                Sign Up
-              </a>
-            </button>
-          </div>
+         
         </ul>
       </nav>
     </div>

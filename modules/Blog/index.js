@@ -6,18 +6,21 @@ import BigCard from "@components/BigCard";
 import Card from "@components/Card";
 import Store from "@components/Store";
 import BigStore from "@components/BigStore";
-import Image from "next/image";
 import {BlogData} from "@lib/blog";
 import Link from 'next/link';
+import Router, { useRouter } from "next/router";
+import BlogDetail from "pages/blog/[slug]";
 
 const Blog = () => {
-  const secondPost = BlogData[2];
 
+  const router = useRouter( )
+  const secondPost = BlogData[0];
+console.log(BlogData)
   return (
     <div>
       <div className="bg-grey   h-[460px]">
         <Navbar />
-        <div className="pt-[45px] ">
+        <div>
           <Title title="Blog" description="Checkout our Latest Stories" />
           <div className="pb-16 mobile:block">
             <Input />
@@ -39,16 +42,21 @@ const Blog = () => {
         </div>
         </Link>
 
-        <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center   ">
-       {BlogData.slice(2).map((blog,index)=>(
+        <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center " >
+       {BlogData.slice(1).map((blog,index)=>(
+         
             <Card
+            
               key={index}
               image={blog.image}
               title={blog.title}
               time={blog.time}
               read="Read Story"
               body={blog.description}
+              slug = {blog.slug}
+              
             />
+            
           ))}
         </div>
       </div>
@@ -58,10 +66,8 @@ const Blog = () => {
           Previous Posts
         </button>
       </div>
-      <div>
-        <div className="mb-[-170px] pt-[24rem]">
-        <Store />
-        </div>
+      <div className="pt-10">
+   
       <BigStore /> 
       </div>
     </div>

@@ -38,14 +38,16 @@ html:focus-within {
 
 
 .blogdetail{
+  
   display: flex;
   flex-direction: column;
 
   p{
     font-family: Roboto;
-    color:pink;
+    color:black;
   }
   img{
     display: flex;
+    width: 350px;
   }
 }

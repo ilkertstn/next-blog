@@ -56,7 +56,10 @@ module.exports = {
       blue:"rgba(14, 125, 255, 1)",
       fontGrey:"rgba(31, 31, 57, 0.5)",
       whiteChange: "rgba(255, 255, 255, 0.7)",
-      blackChange:"rgba(31, 31, 57, 1)"
+      blackChange:"rgba(31, 31, 57, 1)",
+      gray600 : "#404040",
+      
+
 
     },
     fontFamily: {
