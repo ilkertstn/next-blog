@@ -19,9 +19,9 @@ const Card = ({ title, time, body, read, image,slug }) => {
         <div className="font-roboto text-grey tiny pt-4">
           {time} ago.
         </div>
-        <div onClick={()=>router.push(`/blog/${slug}`)} className="font-roboto h-[20px] font-bold pt-2 w-64 text-white underline cursor-pointer">{title.length > 20 ? `${title.slice(0,30)}...` : title}
+        <div onClick={()=>router.push(`/blog/${slug}`)} className="font-roboto h-[20px] font-bold pt-2 w-64 dark:text-white text-soDarkGrey underline cursor-pointer">{title.length > 20 ? `${title.slice(0,30)}...` : title}
 </div>
-        <div className="font-roboto mt-2.5 pt-2 h6 w-[17rem] h-auto tablet:h-[50px] text-white ">
+        <div className="font-roboto mt-2.5 pt-2 h6 w-[17rem] h-auto tablet:h-[50px] dark:text-white text-soDarkGrey ">
         {body.length > 200 ? `${body.slice(0, 150)}...` : body}
         </div>
         <div className="pt-4">

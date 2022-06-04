@@ -8,6 +8,7 @@ module.exports = {
     ],
     safelist: ["py-10", "py-20", "py-32", "py-5", "py-10", "py-[38px]"],
   },
+  darkMode:"class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -40,6 +41,7 @@ module.exports = {
     colors: {
       black: "#000000",
       red200: "#C24C20",
+      lightGrey:"#e5e7eb",
       grey: "rgba(119, 131, 143, 1)",
       white: "#ffffff",
       yellow: "#F19D38",

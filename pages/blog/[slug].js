@@ -1,11 +1,8 @@
 import React from "react";
 import Navbar from "@components/Navbar";
-import Title from "@components/Title";
-import Image from "next/image";
 import BigStore from "@components/BigStore";
 import { BlogData } from "@lib/blog";
-import { BlogMiniPostData } from "@lib/blogMiniPost";
-import { PostCardData } from "@lib/postCard";
+
 import { useRouter } from 'next/router'
 
 
