@@ -1,42 +1,36 @@
 import React from "react";
 import Navbar from "@components/Navbar";
 import Title from "@components/Title";
-import Input from "@components/Input";
 import BigCard from "@components/BigCard";
 import Card from "@components/Card";
-import Store from "@components/Store";
 import BigStore from "@components/BigStore";
 import {BlogData} from "@lib/blog";
 import Link from 'next/link';
-import Router, { useRouter } from "next/router";
 import BlogDetail from "pages/blog/[slug]";
 
 const Blog = () => {
 
-  const router = useRouter( )
   const secondPost = BlogData[0];
 console.log(BlogData)
   return (
-    <div>
-      <div className="bg-grey   h-[460px]">
+    <div className="bg-darkGrey">
+      <div className="bg-darkGrey   h-[460px]">
         <Navbar />
-        <div>
-          <Title title="Blog" description="Checkout our Latest Stories" />
-          <div className="pb-16 mobile:block">
-            <Input />
-          </div>
+        <div className="pt-20">
+          <Title title="Blog" />
+          
         </div>
       </div>
       <div className="container">
       <Link passHref  href={`/blog/${secondPost.slug}`}>
 
-        <div className="flex justify-start pt-40 tablet:pt-12 mt-[-120px] pl-0 tablet:pl-10 pb-16">
+        <div className="flex justify-start pt-40 tablet:pt-12 mt-[-120px] pl-0 tablet:pl-10 pb-16 ">
           <BigCard
             title={secondPost.title}
             time={` ${secondPost.time} ago`}
             user={`By ${secondPost.author}`}
             body={secondPost.description}
-            read="Read Story"
+            read="Read More"
             image={secondPost.image}
           />
         </div>
@@ -51,7 +45,7 @@ console.log(BlogData)
               image={blog.image}
               title={blog.title}
               time={blog.time}
-              read="Read Story"
+              read="Read More"
               body={blog.description}
               slug = {blog.slug}
               

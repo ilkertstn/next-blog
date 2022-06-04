@@ -39,33 +39,19 @@ module.exports = {
     },
     colors: {
       black: "#000000",
-      red50: "rgba(255, 240, 233, 1)",
-      red200: "#fecaca",
-      orange:"rgba(242, 101, 44, 1)",
-      black80: "rgba(0, 0, 0, 0.8)",
-      black50: "rgba(0, 0, 0, 0.5)",
-      black20: "rgba(0, 0, 0, 0.2)",
+      red200: "#C24C20",
       grey: "rgba(119, 131, 143, 1)",
       white: "#ffffff",
-      yellow: "#E7C36F",
-      danger: "#FF453A",
-      "brown-dark": "#E3DBC8",
-      "brown-med": "#f3eee7",
-      "brown-soft": "#F7F4EF",
-      "selectbox-hover": "#FAFAFA",
-      blue:"rgba(14, 125, 255, 1)",
-      fontGrey:"rgba(31, 31, 57, 0.5)",
+      yellow: "#F19D38",
       whiteChange: "rgba(255, 255, 255, 0.7)",
-      blackChange:"rgba(31, 31, 57, 1)",
-      gray600 : "#404040",
-      
-
-
+      blackChange: "rgba(31, 31, 57, 1)",
+      darkGrey: "#23252F",
+      soDarkGrey: "#1A1C23",
     },
     fontFamily: {
       roboto: ["Roboto"],
-      pacifico:["Pacifico"],
-      creteRound:["Crete Round"]
+      pacifico: ["Pacifico"],
+      creteRound: ["Crete Round"],
     },
     fontSize: {
       small: ["15px"],
@@ -76,8 +62,6 @@ module.exports = {
       h4: ["25px"],
       h5: ["22px"],
       h6: ["12px"],
-      
-     
 
       "body-copy": ["16px"],
       subtitle: ["18px"],
@@ -85,11 +69,10 @@ module.exports = {
       "body-small": ["14px"],
       headline: ["15px"],
       tiny: ["11px"],
-    
     },
     lineHeight: {
       lg: "120%",
-      xl: "150%", 
+      xl: "150%",
     },
     boxShadow: {
       regular: "4px 4px 50px rgba(118, 118, 118, 0.04)",

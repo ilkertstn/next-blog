@@ -11,7 +11,7 @@ const Title = ({ title, description, design, minutes, images, name }) => {
         {description}
       </span>
       <div className="w-[100%] tablet:w-[50%]  tablet:ml-[25%] ">
-      <h1 className="font-roboto text-[57px] tablet:h1  font-black text-blackChange ">{title}</h1>
+      <h1 className="font-roboto text-[57px] tablet:h1  font-black text-white ">{title}</h1>
       </div>
       <div className="flex flex-row justify-center pt-7">
         <div>{images}</div>

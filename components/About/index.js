@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className=" w-full md:h-screen p-10 flex items-center justify-center py-16">
+    <div className=" w-full md:h-screen p-10 flex items-center justify-center py-16 bg-darkGrey">
       <div className="max-w-[1240px] m-auto md:grid grid-col-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5] font-medium">About</p>

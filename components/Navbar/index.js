@@ -17,18 +17,18 @@ const Navbar = () => {
     <div>
       <nav
         className={cn(
-          !open ? "bg-grey" : "bg-white",
+          !open ? "bg-darkGrey" : "bg-white",
           "p-[30px] tablet:p-10 tablet:shadow tablet:flex justify-between "
         )}
       >
         <div className="flex flex-row justify-between ">
           <span
             onClick={() => router.push("/")}
-            className="h5 font-roboto font-medium cursor-pointer text-blackChange "
+            className="h5 font-roboto font-medium cursor-pointer text-white "
           >
             <div className="flex">
               <Image className="rounded-full" alt="img" src="/images/ilker.jpg" height={60} width={60}></Image>
-              <div className="p-3">
+              <div className={cn(open ? "text-darkGrey": "text-whtite","p-3")}>
               Ilker Tastan
               </div>
             </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
           </span>
         </div>
         <ul
-          className={`tablet:hidden flex flex-col absolute font-roboto text-center pl-12 font-medium w-[100%] h-[60vh] bg-white top-[90px] z-10 ${
+          className={`tablet:hidden flex flex-col absolute font-roboto text-center pl-12 font-medium w-[100%] h-[60vh] bg-white top-[90px] pt-4 space-y-12  z-10 ${
             open ? "left-0" : "top-[-100%]"
           }`}
         >
@@ -56,25 +56,25 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <ul className="tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium  hidden cursor-pointer uppercase text-blackChange">
-          <li className="mx-0  my-6 tablet:my-0 hover:border-b border-blue">
+        <ul className="tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium  hidden cursor-pointer  text-white">
+          <li className="mx-0  my-6 tablet:my-0 hover:bg-soDarkGrey px-6 py-3 rounded">
             <a onClick={() => router.push("/")} className="">
               Home
             </a>
           </li>
           <Link passHref href="/about">
-          <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
+          <li className="mx-4 my-6 tablet:my-0 hover:bg-soDarkGrey px-6 py-3 rounded">
               About
           </li>
           </Link>
           <Link passHref href="/skills">
-          <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
+          <li className="mx-4 my-6 tablet:my-0 hover:bg-soDarkGrey px-6 py-3 rounded">
             
               Skills
           
           </li>
           </Link>
-          <li className="mx-4 my-6 tablet:my-0 hover:border-b border-blue">
+          <li className="mx-4 my-6 tablet:my-0 hover:bg-soDarkGrey px-6 py-3 rounded">
             <a href="#" className="">
               Contact
             </a>

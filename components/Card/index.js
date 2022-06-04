@@ -19,13 +19,13 @@ const Card = ({ title, time, body, read, image,slug }) => {
         <div className="font-roboto text-grey tiny pt-4">
           {time} ago.
         </div>
-        <div className="font-roboto h-[20px] font-bold pt-2 w-64">{title.length > 20 ? `${title.slice(0,30)}...` : title}
+        <div onClick={()=>router.push(`/blog/${slug}`)} className="font-roboto h-[20px] font-bold pt-2 w-64 text-white underline cursor-pointer">{title.length > 20 ? `${title.slice(0,30)}...` : title}
 </div>
-        <div className="font-roboto text-fontGrey mt-2.5 pt-2 h6 w-[17rem] h-auto tablet:h-[50px] ">
+        <div className="font-roboto mt-2.5 pt-2 h6 w-[17rem] h-auto tablet:h-[50px] text-white ">
         {body.length > 200 ? `${body.slice(0, 150)}...` : body}
         </div>
         <div className="pt-4">
-          <button onClick={()=>router.push(`/blog/${slug}`)} className="font-roboto font-bold text-blue h6">{read}</button>
+          <button onClick={()=>router.push(`/blog/${slug}`)} className="font-roboto font-bold text-red200 h6">{read}</button>
         </div>
       </div>
     </div>

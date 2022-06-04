@@ -2,10 +2,6 @@ import React from "react";
 import Navbar from "@components/Navbar";
 import Title from "@components/Title";
 import Image from "next/image";
-import Comment from "@components/Comment";
-import BlogMiniPost from "@components/BlogMinipost";
-import PostCard from "@components/PostCard";
-import Store from "@components/Store";
 import BigStore from "@components/BigStore";
 import { BlogData } from "@lib/blog";
 import { BlogMiniPostData } from "@lib/blogMiniPost";
@@ -21,14 +17,14 @@ const BlogDetail = () => {
   const {slug} = router.query;
 const selectedBlog = BlogData.find((item) => item.slug === slug);
 
-console.log('selected blog',selectedBlog?.content);
+
 
   return (
     <div className="flex flex-col">
          <div className="bg-grey h-[80px]">
         <Navbar />
         
-        <div className="blogdetail container w-full pt-10 tablet:w-[120vh] min-h-[70vh] bg-white pb-10" dangerouslySetInnerHTML={{__html: selectedBlog?.content}}/>
+        <div className="blogdetail container w-full pt-10 tablet:w-[120vh] min-h-[70vh] bg-darkGrey pb-10" dangerouslySetInnerHTML={{__html: selectedBlog?.content}}/>
      
         
         {/* <div className="laptop:pt-[40px]">
@@ -125,9 +121,7 @@ console.log('selected blog',selectedBlog?.content);
               puincidunt, Vestibulum
             </div>
 
-            <div className="pt-18 ">
-              <Comment buttonName="Post Comment" />
-            </div>
+            
             <div className="flex flex-col pt-44 space-y-10">
               {BlogMiniPostData.map((blogData, index) => (
                 <BlogMiniPost
