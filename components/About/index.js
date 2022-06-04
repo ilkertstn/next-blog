@@ -3,33 +3,105 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className=" w-full md:h-screen p-10 flex items-center justify-center py-16 bg-darkGrey">
-      <div className="max-w-[1240px] m-auto md:grid grid-col-3 gap-8">
-        <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-[#5651e5] font-medium">About</p>
-          <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-600">
-            I&lsquo;m 27 years old and I&lsquo;ve been working as a front-end developer for
-            about 6 months. Before the software industry, I was in the real
-            estate industry and wanted to do something more professional and
-            creative. Therefore, I want to improve myself and be permanent in
-            this sector. I hope I can do this. 
-          </p>
-          <p className="py-2 text-gray-600">I think I learned quickly. I have
-            coded with HTML, CSS, Javascript, React.js, Next.js and Tailwind and
-            I am improving myself by making different projects as much as
-            possible.</p>
-          
+    <div className="bg-darkGrey w-full">
+      <main>
+        <div className="text-white text-center m pt-28">
+          <h4 className="my-6">Hi there!</h4>
+          <h1 className="font-semibold mb-10">I&apos;m Ilker Tastan</h1>
         </div>
-        <div className=" w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center pt-6  hover:scale-105 ease-in duration-300">
-             <Image className="rounded-xl" src="https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              width={560}
-              height={360}
-             alt="resim"
-             objectFit="cover"
-             ></Image>
-        </div>
-      </div>
+        <section className="container">
+          <div className=" flex flex-row-normal -mx-8 py-8 items-center">
+            <div>
+              <Image
+                className="rounded-lg"
+                alt="img"
+                src="/images/ilker.jpg"
+                height={400}
+                width={400}
+              />
+            </div>
+            <div className="w-full tablet:w-7/12 tablet:mx-8 text-white">
+              <p className="mb-[1rem]">
+                I am a junior front-end developer working to help build
+                user-friendly and practical websites.
+              </p>
+              <p className="mb-[1rem]">
+                I&lsquo;ve been a developer since I started my career for about
+                3 months now and I try to do the best they can for everyone who
+                uses websites.
+              </p>
+              <p className="mb-[1rem]">
+                Now I design and develop beautiful websites focused on providing
+                the best experience for everyone who uses them, allowing your
+                team to easily edit these websites while giving your users the
+                best experience.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="container">
+          <div className="tablet:flex tablet:-mx-8 py-8 items-center tablet:flex-row-reverse">
+            <div className="w-full tablet:md:w-5/12 md:mx-8 mb-6">
+              <div className="px-4">
+                <Image
+                  className="rounded-lg"
+                  alt="img"
+                  src="/images/ilker2.jpeg"
+                  height={500}
+                  width={400}
+                ></Image>
+              </div>
+            </div>
+            <div className="text-white">
+              <p className="mb-[1rem]">
+                I have always loved technology. I was interested in technology
+                from a young age. Most kids play a lot of video games, from
+                Atari to Playstation to Gameboy to Computer, I loved playing
+                with them, but my interest didn&#39;t end in entertainment.
+              </p>
+              <p className="mb-[1rem]">
+                The more I played, the more I wanted to understand how things
+                worked. If something broke, I would take it apart and figure out
+                what went wrong and try to get it back to normal. I usually
+                couldn&#39;t restore it.
+              </p>
+              <p className="mb-[1rem]">
+                I never lost my curiosity, but my interest in technologies
+                changed as I expanded my knowledge from breaking down equipment
+                to building new websites with code.
+              </p>
+              <p className="mb-[1rem]">
+                Now I focus on learning about people and how they interact with
+                websites, making sure they can achieve their goals, leaving them
+                satisfied and making them more likely to return as customers.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="container">
+          <div className=" flex flex-row-normal -mx-8 py-8 items-center">
+            <div>
+              <Image
+                className="rounded-lg"
+                alt="img"
+                src="/images/skills.png"
+                height={400}
+                width={400}
+              />
+            </div>
+            <div className="w-full tablet:w-7/12 tablet:mx-8 text-white">
+              <p className="mb-[1rem]">
+              I am currently working on a project that is growing and I am improving myself day by day. I think that when this project is finalized, I will have crossed an important threshold.
+
+              </p>
+              <p className="mb-[1rem]">
+              Here are just a few of the tools I&#39;ve worked with in the past. I&#39;m always open to adding more to this list if they will help the project that needs it.
+              </p>
+           
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
