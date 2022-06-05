@@ -41,14 +41,18 @@ module.exports = {
     colors: {
       black: "#000000",
       red200: "#C24C20",
+      red300:"#BF360C",
       lightGrey:"#e5e7eb",
       grey: "rgba(119, 131, 143, 1)",
       white: "#ffffff",
       yellow: "#F19D38",
+      yellow300: "#fde047",
       whiteChange: "rgba(255, 255, 255, 0.7)",
       blackChange: "rgba(31, 31, 57, 1)",
       darkGrey: "#23252F",
       soDarkGrey: "#1A1C23",
+      blue:"#0A66C2",
+      purple:"#581c87",
     },
     fontFamily: {
       roboto: ["Roboto"],

@@ -42,7 +42,7 @@ const Contact = () => {
         <input className='dark:bg-soDarkGrey bg-lightGrey rounded-2xl p-4 tablet:p-2 tablet:w-[665px] h-[200px] outline-none text-white dark:text-soDarkGrey' placeholder='Your Message' name='message'></input>
         </div>
         <div className='col-8 form-group mx-auto'>
-           <input type="submit" className='bg-red200 tablet:w-[665px] pl-14 tablet:pl-6 pr-14 tablet:pr-6 pt-3 tablet:pt-2 pb-3 tablet:pb-2 rounded-3xl tablet:rounded-2xl text-white dark:text-soDarkGrey font-roboto cursor-pointer' value="Send Message"></input>
+           <input type="submit" className='bg-red200 hover:bg-red300 tablet:w-[665px] pl-14 tablet:pl-6 pr-14 tablet:pr-6 pt-3 tablet:pt-2 pb-3 tablet:pb-2 rounded-3xl tablet:rounded-2xl text-white font-roboto cursor-pointer' value="Send Message"></input>
            </div>
       </form>
       </div>
