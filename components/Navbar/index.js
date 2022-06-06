@@ -102,7 +102,7 @@ const Navbar = () => {
             </li>
           </Link>
           <button
-            className="text-soDarkGrey dark:text-white bg-purple dark:bg-yellow300  p-3 rounded-full hover:scale-125 ease-in duration-200"
+            className="text-white bg-purple dark:bg-yellow300  p-3 rounded-full hover:scale-125 ease-in duration-200"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             <FaRegLightbulb />

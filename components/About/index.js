@@ -11,7 +11,7 @@ const About = () => {
         </div>
         <section className="container ">
           <div className="flex flex-col tablet:flex-row tablet:-mx-8 tablet:py-8 items-center">
-            <div className="w-[330px] tablet:w-[400px] h-[350px] tablet:h-[400px] relative ">
+            <div className="w-[355px] tablet:w-[400px] h-[350px] tablet:h-[400px] relative ">
               <Image
                 className="rounded-lg"
                 alt="img"
@@ -42,7 +42,7 @@ const About = () => {
         <section className="container">
           <div className="flex flex-col tablet:flex-row-reverse  tablet:-mx-8 tablet:py-8 items-center ">
             <div className="w-full tablet:md:w-5/12 md:mx-8 mb-6 pl-4">
-              <div className="w-[315px] tablet:w-[340px] h-[380px] tablet:h-[400px] relative">
+              <div className="w-[355px] tablet:w-[340px] h-[380px] tablet:h-[400px] relative">
                 <Image
                   className="rounded-lg"
                   alt="img"
@@ -80,7 +80,7 @@ const About = () => {
         </section>
         <section className="container">
           <div className=" flex flex-col tablet:flex-row tablet:-mx-8 py-8 items-center">
-            <div className="w-[31 0px] tablet:w-[400px] h-[400px] relative">
+            <div className="w-[355px] tablet:w-[400px] h-[400px] relative">
               <Image
                 className="rounded-lg"
                 alt="img"
