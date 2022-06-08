@@ -1,7 +1,7 @@
 import Navbar from '@components/Navbar'
 import React from 'react'
 import Skills from "@components/Skills"
-import BigStore from '@components/BigStore'
+import BigStore from '@components/Footer'
 
 const Skillss = () => {
   return (

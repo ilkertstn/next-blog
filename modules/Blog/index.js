@@ -3,16 +3,16 @@ import Navbar from "@components/Navbar";
 import Title from "@components/Title";
 import BigCard from "@components/BigCard";
 import Card from "@components/Card";
-import BigStore from "@components/BigStore";
 import { BlogData } from "@lib/blog";
 import Link from "next/link";
+import Footer from "@components/Footer";
 const Blog = () => {
   
   const secondPost = BlogData[0];
   console.log(BlogData);
   return (
-    <div className="dark:bg-darkGrey bg-white">
-      <div className="dark:bg-darkGrey bg-white h-[460px]">
+    <div className="dark:bg-darkGrey bg-slate100">
+      <div className="dark:bg-darkGrey bg-slate100 h-[460px]">
         <Navbar />
         <div className="pt-20">
           <Title title="Blog" />
@@ -20,8 +20,11 @@ const Blog = () => {
         </div>
       </div>
       <div className="container">
-        <Link passHref href={`/blog/${secondPost.slug}`}>
-          <div className="flex justify-start pt-40 tablet:pt-12 mt-[-120px] pl-0 tablet:pl-10 pb-16 ">
+     
+          <div className="tablet:pt-20">
+            
+          <div className="flex justify-start pt-40 tablet:pt-12 mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   ">
+            
             <BigCard
               title={secondPost.title}
               time={` ${secondPost.time} ago`}
@@ -31,9 +34,10 @@ const Blog = () => {
               image={secondPost.image}
             />
           </div>
-        </Link>
+          </div>
+  
 
-        <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center ">
+        <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center drop-shadow-2xl rounded-3xl ">
           {BlogData.slice(1).map((blog, index) => (
             <Card
 
@@ -53,7 +57,7 @@ const Blog = () => {
 
       <div className="pt-10">
 
-        <BigStore />
+        <Footer />
       </div>
     </div>
   );

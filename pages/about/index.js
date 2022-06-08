@@ -1,7 +1,7 @@
 import React from 'react'
 import About from '@components/About'
 import Navbar from '@components/Navbar'
-import BigStore from '@components/BigStore'
+import BigStore from '@components/Footer'
 const Aboutt = () => {
   return (
     <div>

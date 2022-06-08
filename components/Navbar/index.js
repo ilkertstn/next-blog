@@ -1,31 +1,28 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import cn from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { FaRegLightbulb,FaBars } from "react-icons/fa";
+import { FaRegLightbulb, FaLinkedin, FaGithub } from "react-icons/fa";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const links = ["Home", "About", "Skills", "Contact"];
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+  };
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   return (
-    <div>
-      <nav
-        className={cn(
-          !open ? "bg-white" : "bg-white ",
-          "p-[30px] tablet:p-10 tablet:shadow tablet:flex justify-between dark:bg-darkGrey "
-        )}
-      >
+    <div className="shadow-2xl  ">
+      <nav className="bg-slate100 p-[30px] tablet:p-10  tablet:flex justify-between dark:bg-darkGrey ">
         <div className="flex flex-row justify-between ">
           <span
             onClick={() => router.push("/")}
             className="h5 font-roboto font-medium cursor-pointer text-white "
           >
             <div className="flex">
-              <div className="relative w-[80px] h-[80px] z-20">
+              <div className="relative w-[80px] h-[80px] ">
                 <Image
                   className="rounded-full"
                   alt="img"
@@ -34,52 +31,21 @@ const Navbar = () => {
                   objectFit="cover"
                 ></Image>
               </div>
-              <div
-                className={cn(
-                  open ? "text-darkGrey" : "text-soDarkGrey",
-                  "p-7 dark:text-white"
-                )}
-              >
+              <div className="text-soDarkGrey p-7 dark:text-white w-[200px]">
                 Ilker Tastan
               </div>
             </div>
           </span>
-          <div className="flex flex-col">
-            <button
-              className="text-soDarkGrey dark:text-white pl-4 tablet:hidden block "
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            >
-              <FaRegLightbulb />
-            </button>
-            <span
-              className="pt-5 pl-4 text-soDarkGrey dark:text-white cursor-pointer tablet:hidden block"
-              onClick={() => setOpen(!open)}
-            >
-              <FaBars />
-            </span>
-          </div>
+
+          <span className="pt-8 text-soDarkGrey dark:text-white cursor-pointer tablet:hidden block">
+            <AiOutlineMenu onClick={handleNav} size={20} />
+          </span>
         </div>
-        <ul
-          className={`tablet:hidden flex flex-col absolute font-roboto text-center pl-12 font-medium w-[100%] h-[65vh] dark:bg-darkGrey bg-white top-[90px] pt-16 space-y-12  z-10 ${
-            open ? "left-0" : "top-[-100%]"
-          }`}
-        >
-          {links.map((el, index) => {
-            return (
-              <li
-                key={index}
-                className="hover:cursor-pointer hover:bg-white hover:text-black w-[90%] mt-4 "
-              >
-                {el}
-              </li>
-            );
-          })}
-        </ul>
         <ul className="tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium  hidden cursor-pointer  text-white">
-          <li className="mx-0  my-6 tablet:my-0 hover:bg-soDarkGrey px-6 py-3 rounded">
+          <li className="mx-0  my-6 tablet:my-0  px-6 py-3 rounded">
             <a
               onClick={() => router.push("/")}
-              className="dark:text-white text-soDarkGrey dark:hover:text-white hover:text-white"
+              className="hover:bg-soDarkGrey dark:hover:text-white px-6 py-3 hover:text-white  rounded dark:text-white text-soDarkGrey"
             >
               Home
             </a>
@@ -102,13 +68,85 @@ const Navbar = () => {
             </li>
           </Link>
           <button
-            className="text-white bg-purple dark:bg-yellow300  p-3 rounded-full hover:scale-125 ease-in duration-200"
+            className="text-white bg-purple dark:bg-yellow300 rounded-full p-3 hover:scale-125 ease-in duration-200"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             <FaRegLightbulb />
           </button>
         </ul>
       </nav>
+      <div
+        className={
+          nav
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 z-20"
+            : " "
+        }
+      >
+        <div
+          className={
+            nav
+              ? " fixed left-0 top-0 w-[75%] screens:w-[60%] tablet:w-[45%] h-screen bg-slate100 dark:bg-darkGrey p-10 ease-in duration-500"
+              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+          }
+        >
+          <div>
+            <div className="flex w-full items-center justify-between">
+              <Image
+                className="rounded-full" 
+                alt="img"
+                src="/images/ilker.jpg"
+                height={70}
+                width={70}
+              />
+              <div className="flex items-center space-x-3">
+                <button  onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-white bg-purple dark:bg-yellow300 p-3 rounded-full shadow-lg shadow-purple dark:shadow-yellow cursor-pointer">
+                  <FaRegLightbulb size={20} />
+                </button>
+                <div className="rounded-full shadow-lg shadow-grey dark:shadow-black cursor-pointer p-3 dark:text-white">
+                  <AiOutlineClose onClick={handleNav} size={20} />
+                </div>
+              </div>
+            </div>
+            <div className="border-b border-grey my-4">
+              <p className="font-roboto w-[85%] tablet:w-[90%] py-4">
+                Let&rsquo;s build something legendary together
+              </p>
+            </div>
+          </div>
+          <div className="py-4 flex flex-col">
+            <ul>
+              <Link passHref href="/">
+                <li className="py-4 text-subtitle">Home</li>
+              </Link>
+              <Link passHref href="/">
+                <li className="py-4 text-subtitle">About</li>
+              </Link>
+              <Link passHref href="/">
+                <li className="py-4 text-subtitle">Skills</li>
+              </Link>
+              <Link passHref href="/">
+                <li className="py-4 text-subtitle">Contact</li>
+              </Link>
+            </ul>
+            <div className="pt-20 ">
+              <p className="uppercase tracking-wide text-red200 font-medium">
+                Let&rsquo;s Connect
+              </p>
+              <div className="flex items-center justify-between my-4 screens:w-[70%]">
+                <div className="rounded-full shadow-lg bg-blue  p-3 cursor-pointer hover:scale-105 ease-in duration-200 text-white">
+                  <FaLinkedin />
+                </div>
+                <div className="rounded-full shadow-lg shadow-black p-3 cursor-pointer hover:scale-105 ease-in duration-200 ">
+                  <FaGithub />
+                </div>
+                <div className="rounded-full shadow-lg bg-red200 p-3 cursor-pointer hover:scale-105 ease-in duration-200 text-white">
+                  <AiOutlineMail />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

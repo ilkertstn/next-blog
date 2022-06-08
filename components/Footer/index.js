@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
-const BigStore = () => {
+const Footer = () => {
   const [data, setData] = useState({
     email: "",
   });
@@ -21,7 +21,7 @@ const BigStore = () => {
   };
 
   return (
-    <div className="dark:bg-soDarkGrey bg-white max-w-screen-md tablet:h-[600px]">
+    <div className="dark:bg-soDarkGrey bg-slate100 max-w-screen-md tablet:h-[600px]">
       <div className="flex flex-col text-center pt-10 tablet:pt-20">
  
 
@@ -48,16 +48,16 @@ const BigStore = () => {
               passHref
               href="https://www.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a/"
             >
-              <div className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white dark:hover:text-blue hover:text-blue text-soDarkGrey">
+              <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white dark:hover:text-blue hover:text-blue text-soDarkGrey">
                 <FaLinkedinIn />
               </div>
             </Link>
             <Link passHref href="https://github.com/ilkertstn">
-              <div className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white text-soDarkGrey">
+              <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white text-soDarkGrey">
                 <FaGithub />
               </div>
             </Link>
-            <div className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white dark:hover:text-red300 hover:text-red300  text-soDarkGrey">
+            <div className="rounded-full shadow-lg p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white dark:hover:text-red300 hover:text-red300  text-soDarkGrey">
               <AiOutlineMail />
             </div>
             
@@ -70,20 +70,20 @@ const BigStore = () => {
               </span>
               <div className="flex flex-col pt-2 tablet:pt-5 space-y-0 tablet:space-y-2">
                 <Link href="/blog" passHref>
-                  <button className="font-roboto text dark:text-whiteChange text-soDarkGrey tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow	hover:text-yellow hover:underline focus:text-yellow ">
+                  <button className="font-roboto text dark:text-whiteChange text-soDarkGrey tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow	hover:text-yellow hover:underline focus:text-yellow font-medium">
                     Home
                   </button>
                 </Link>
                 <Link passHref href="/about">
-                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow">
+                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
                     About
                   </button>
                 </Link>
-                <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow">
+                <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
                   Skills
                 </button>
                 <Link href="/contact" passHref>
-                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow">
+                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
                     Contact
                   </button>
                 </Link>
@@ -98,16 +98,16 @@ const BigStore = () => {
                   passHref
                   href="https://tr.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a"
                 >
-                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey tablet:self-baseline pt-2 tablet:pt-0 dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow  ">
+                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey tablet:self-baseline pt-2 tablet:pt-0 dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium ">
                     LinkedIn
                   </button>
                 </Link>
                 <Link passHref href="https://github.com/ilkertstn">
-                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey tablet:self-baseline	pt-[18px] tablet:pt-2 dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow">
+                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey tablet:self-baseline	pt-[18px] tablet:pt-2 dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
                     GitHub
                   </button>
                 </Link>
-                <button className="font-roboto dark:text-whiteChange text-soDarkGrey tablet:self-baseline	pt-[18px] tablet:pt-2 dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow">
+                <button className="font-roboto dark:text-whiteChange text-soDarkGrey tablet:self-baseline	pt-[18px] tablet:pt-2 dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
                   Mail
                 </button>
               </div>
@@ -125,4 +125,4 @@ const BigStore = () => {
   );
 };
 
-export default BigStore;
+export default Footer;

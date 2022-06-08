@@ -17,10 +17,10 @@ const BigCard = ({title, body, user, time, read, image }) => {
         />
       </div>
       <div className="flex flex-col w-[80%] tablet:w-[27rem] ml-6 tablet:ml-16 mt-6">
-        <div className="font-roboto h2 font-bold w-[70%] tablet:w-[100%] dark:text-white text-soDarkGrey underline cursor-pointer ">
+        <div  className="font-roboto h2 font-bold w-[70%] tablet:w-[100%] dark:text-white text-soDarkGrey underline cursor-pointer ">
           {title}
         </div>
-        <div className="font-roboto dark:text-white text-soDarkGrey mt-2.5 w-[95%] text-small">
+        <div className="font-roboto dark:text-white text-soDarkGrey mt-2.5 w-[95%] text-small cursor-pointer hover:underline">
           {body.length > 200 ? `${body.slice(0, 250)}...` : body}
         </div>
         <div className="pt-4">

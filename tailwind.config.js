@@ -47,12 +47,15 @@ module.exports = {
       white: "#ffffff",
       yellow: "#F19D38",
       yellow300: "#fde047",
-      whiteChange: "rgba(255, 255, 255, 0.7)",
+      whiteChange: "#FFFDFC",
       blackChange: "rgba(31, 31, 57, 1)",
       darkGrey: "#23252F",
       soDarkGrey: "#1A1C23",
       blue:"#0A66C2",
       purple:"#581c87",
+      slate100:"#ffffff",  
+      purplefont:"#8A69A0",
+      
     },
     fontFamily: {
       roboto: ["Roboto"],
@@ -80,9 +83,7 @@ module.exports = {
       lg: "120%",
       xl: "150%",
     },
-    boxShadow: {
-      regular: "4px 4px 50px rgba(118, 118, 118, 0.04)",
-    },
+   
     extend: {
       spacing: {
         15: "3.75rem",

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@components/Navbar";
-import BigStore from "@components/BigStore";
+import BigStore from "@components/Footer";
 import { BlogData } from "@lib/blog";
 
 import { useRouter } from 'next/router'
