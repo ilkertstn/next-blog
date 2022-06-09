@@ -48,24 +48,24 @@ const Footer = () => {
               passHref
               href="https://www.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a/"
             >
-              <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white dark:hover:text-blue hover:text-blue text-soDarkGrey">
+              <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-110 ease-in duration-200 bg-blue text-white">
                 <FaLinkedinIn />
               </div>
             </Link>
             <Link passHref href="https://github.com/ilkertstn">
-              <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white text-soDarkGrey">
+              <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-110 ease-in duration-200 bg-black dark:bg-white text-white dark:text-black">
                 <FaGithub />
               </div>
             </Link>
-            <div className="rounded-full shadow-lg p-3 cursor-pointer hover:scale-150 ease-in duration-200 dark:text-white dark:hover:text-red300 hover:text-red300  text-soDarkGrey">
+            <div className="rounded-full shadow-lg p-3 cursor-pointer hover:scale-110 ease-in duration-200 bg-red300 text-white">
               <AiOutlineMail />
             </div>
             
           </div>
             </div>
-            
-            <div className="flex flex-col space-y-7 tablet:space-y-3 ">
-              <span className="hidden mobile:block font-roboto font-bold h5 dark:text-white text-soDarkGrey tablet:self-baseline	">
+            <div className="flex flex-row justify-center space-x-18 pt-12">
+            <div className="flex flex-col tablet:space-y-3 ">
+              <span className=" font-roboto font-bold h5 dark:text-white text-soDarkGrey tablet:self-baseline	">
                 Quick Links
               </span>
               <div className="flex flex-col pt-2 tablet:pt-5 space-y-0 tablet:space-y-2">
@@ -83,17 +83,17 @@ const Footer = () => {
                   Skills
                 </button>
                 <Link href="/contact" passHref>
-                  <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
+                  <button className="hidden mobile:block font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
                     Contact
                   </button>
                 </Link>
               </div>
             </div>
             <div className="flex flex-col space-y-0 tablet:space-y-3 ">
-              <span className="hidden mobile:block font-roboto font-bold h5 dark:text-white text-soDarkGrey tablet:self-baseline">
+              <span className=" font-roboto font-bold h5 dark:text-white text-soDarkGrey tablet:self-baseline">
                 Contact
               </span>
-              <div className="flex flex-col pt-2 tablet:pt-5  space-y-0 tablet:space-y-2">
+              <div className="flex flex-col pt-0 tablet:pt-5  space-y-0 tablet:space-y-2">
                 <Link
                   passHref
                   href="https://tr.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a"
@@ -111,12 +111,13 @@ const Footer = () => {
                   Mail
                 </button>
               </div>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center tablet:pt-24 ">
+          <div className="flex justify-center pt-8 tablet:pt-24 ">
             <hr className="hidden mobile:block dark:text-whiteChange text-soDarkGrey w-[1200px] "></hr>
           </div>
-          <div className="flex tablet:justify-start justify-center tablet:pl-18 pt-8 dark:text-white text-soDarkGrey font-roboto">
+          <div className="flex justify-start  tablet:pl-18 pt-8 dark:text-white text-soDarkGrey font-roboto">
             © 2022 Ilker Tastan
           </div>
         </div>

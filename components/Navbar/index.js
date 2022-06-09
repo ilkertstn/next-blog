@@ -3,8 +3,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { FaRegLightbulb, FaLinkedin, FaGithub } from "react-icons/fa";
-import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
+import { FaLinkedin, FaGithub, FaUserAstronaut } from "react-icons/fa";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineMail, AiOutlineHome, AiOutlineContacts } from "react-icons/ai";
+import {MdNightlight, MdLightMode} from "react-icons/md"
+import {GiSkills} from "react-icons/gi"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -45,33 +47,34 @@ const Navbar = () => {
           <li className="mx-0  my-6 tablet:my-0  px-6 py-3 rounded">
             <a
               onClick={() => router.push("/")}
-              className="hover:bg-soDarkGrey dark:hover:text-white px-6 py-3 hover:text-white  rounded dark:text-white text-soDarkGrey"
+              className="dark:hover:bg-soDarkGrey hover:bg-whiteChange  dark:hover:text-white px-6 py-3 hover:text-blackChange  rounded-xl dark:text-white text-soDarkGrey"
             >
               Home
             </a>
           </li>
           <Link passHref href="/about">
-            <li className="mx-4 my-6 tablet:my-0 hover:bg-soDarkGrey dark:hover:text-white hover:text-white px-6 py-3 rounded dark:text-white text-soDarkGrey">
+            <li className="mx-4 my-6 tablet:my-0 dark:hover:bg-soDarkGrey hover:bg-whiteChange dark:hover:text-white hover:text-blackChange px-6 py-3 rounded-xl dark:text-white text-soDarkGrey">
               About
             </li>
           </Link>
           <Link passHref href="/skills">
-            <li className="mx-4 my-6 tablet:my-0 hover:bg-soDarkGrey dark:hover:text-white hover:text-white px-6 py-3 rounded text-soDarkGrey dark:text-white">
+            <li className="mx-4 my-6 tablet:my-0 dark:hover:bg-soDarkGrey hover:bg-whiteChange dark:hover:text-white hover:text-blackChange px-6 py-3 rounded-xl text-soDarkGrey dark:text-white">
               Skills
             </li>
           </Link>
           <Link passHref href="/contact">
-            <li className="mx-4 my-6 tablet:my-0 hover:bg-soDarkGrey hover:text-white dark:hover:text-white px-6 py-3 rounded text-soDarkGrey dark:text-white">
+            <li className="mx-4 my-6 tablet:my-0 dark:hover:bg-soDarkGrey hover:bg-whiteChange hover:text-blackChange dark:hover:text-white px-6 py-3 rounded-xl text-soDarkGrey dark:text-white">
               <a href="#" className="">
                 Contact
               </a>
             </li>
           </Link>
           <button
-            className="text-white bg-purple dark:bg-yellow300 rounded-full p-3 hover:scale-125 ease-in duration-200"
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="text-white bg-purple dark:bg-yellow300 rounded-full p-3 hover:scale-110 ease-in duration-200"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light" )}
           >
-            <FaRegLightbulb />
+            {(theme==="dark" ? <MdLightMode/> : <MdNightlight/>)} 
+           
           </button>
         </ul>
       </nav>
@@ -100,7 +103,7 @@ const Navbar = () => {
               />
               <div className="flex items-center space-x-3">
                 <button  onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-white bg-purple dark:bg-yellow300 p-3 rounded-full shadow-lg shadow-purple dark:shadow-yellow cursor-pointer">
-                  <FaRegLightbulb size={20} />
+                {(theme==="dark" ? <MdLightMode/> : <MdNightlight/>)} 
                 </button>
                 <div className="rounded-full shadow-lg shadow-grey dark:shadow-black cursor-pointer p-3 dark:text-white">
                   <AiOutlineClose onClick={handleNav} size={20} />
@@ -114,32 +117,44 @@ const Navbar = () => {
             </div>
           </div>
           <div className="py-4 flex flex-col">
-            <ul>
+            <ul className="font-medium">
+              <div className="flex items-center space-x-4">
+              <AiOutlineHome size={30}/>
               <Link passHref href="/">
-                <li className="py-4 text-subtitle">Home</li>
+                <li className="py-4 text-small cursor-pointer w-15 hover:underline">Home</li>
               </Link>
-              <Link passHref href="/">
-                <li className="py-4 text-subtitle">About</li>
+              </div>
+              <div className="flex items-center space-x-4 ">
+                <FaUserAstronaut size={30} />
+              <Link passHref href="/about">
+                <li className="py-4 text-small cursor-pointer w-15 hover:underline">About</li>
               </Link>
-              <Link passHref href="/">
-                <li className="py-4 text-subtitle">Skills</li>
+              </div>
+              <div className="flex items-center space-x-4">
+                <GiSkills size={30}/>
+              <Link passHref href="/skills  ">
+                <li className="py-4 text-small cursor-pointer w-15 hover:underline">Skills</li>
               </Link>
-              <Link passHref href="/">
-                <li className="py-4 text-subtitle">Contact</li>
+              </div>
+              <div className="flex items-center space-x-4">
+                <AiOutlineContacts size={30}/>
+              <Link passHref href="/contact">
+                <li className="py-4 text-small cursor-pointer w-15 hover:underline">Contact</li>
               </Link>
+              </div>
             </ul>
             <div className="pt-20 ">
               <p className="uppercase tracking-wide text-red200 font-medium">
                 Let&rsquo;s Connect
               </p>
               <div className="flex items-center justify-between my-4 screens:w-[70%]">
-                <div className="rounded-full shadow-lg bg-blue  p-3 cursor-pointer hover:scale-105 ease-in duration-200 text-white">
+                <div className="rounded-full shadow-lg bg-blue p-3 cursor-pointer hover:scale-105 ease-in duration-200 text-white">
                   <FaLinkedin />
                 </div>
-                <div className="rounded-full shadow-lg shadow-black p-3 cursor-pointer hover:scale-105 ease-in duration-200 ">
+                <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-200 bg-black dark:bg-white text-white  dark:text-black ">
                   <FaGithub />
                 </div>
-                <div className="rounded-full shadow-lg bg-red200 p-3 cursor-pointer hover:scale-105 ease-in duration-200 text-white">
+                <div className="rounded-full shadow-lg  bg-red300 p-3 cursor-pointer hover:scale-105 ease-in duration-200 text-white">
                   <AiOutlineMail />
                 </div>
               </div>

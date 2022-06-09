@@ -6,25 +6,22 @@ import Card from "@components/Card";
 import { BlogData } from "@lib/blog";
 import Link from "next/link";
 import Footer from "@components/Footer";
+import { useRouter } from "next/router";
 const Blog = () => {
-  
   const secondPost = BlogData[0];
   console.log(BlogData);
+  const router = useRouter()
   return (
     <div className="dark:bg-darkGrey bg-slate100">
       <div className="dark:bg-darkGrey bg-slate100 h-[460px]">
         <Navbar />
-        <div className="pt-20">
+        <div className="pt-30">
           <Title title="Blog" />
-
         </div>
       </div>
       <div className="container">
-     
-          <div className="tablet:pt-20">
-            
-          <div className="flex justify-start pt-40 tablet:pt-12 mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   ">
-            
+        <div>
+          <div  onClick={()=>router.push(`/blog/${secondPost.slug}`)} className="flex justify-start tablet:pt-40 mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   ">
             <BigCard
               title={secondPost.title}
               time={` ${secondPost.time} ago`}
@@ -34,13 +31,11 @@ const Blog = () => {
               image={secondPost.image}
             />
           </div>
-          </div>
-  
+        </div>
 
         <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center drop-shadow-2xl rounded-3xl ">
           {BlogData.slice(1).map((blog, index) => (
             <Card
-
               key={index}
               image={blog.image}
               title={blog.title}
@@ -49,14 +44,11 @@ const Blog = () => {
               body={blog.description}
               slug={blog.slug}
             />
-
           ))}
         </div>
       </div>
 
-
       <div className="pt-10">
-
         <Footer />
       </div>
     </div>

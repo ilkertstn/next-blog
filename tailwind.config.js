@@ -47,7 +47,7 @@ module.exports = {
       white: "#ffffff",
       yellow: "#F19D38",
       yellow300: "#fde047",
-      whiteChange: "#FFFDFC",
+      whiteChange: "#FBF7F3",
       blackChange: "rgba(31, 31, 57, 1)",
       darkGrey: "#23252F",
       soDarkGrey: "#1A1C23",

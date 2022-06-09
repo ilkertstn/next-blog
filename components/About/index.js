@@ -11,7 +11,7 @@ const About = () => {
         </div>
         <section className="container ">
           <div className="flex flex-col tablet:flex-row tablet:-mx-8 tablet:py-8 items-center">
-            <div className="w-[355px] tablet:w-[400px] h-[350px] tablet:h-[400px] relative ">
+            <div className="w-[335px] tablet:w-[400px] h-[350px] tablet:h-[400px] relative ">
               <Image
                 className="rounded-lg"
                 alt="img"
@@ -41,8 +41,8 @@ const About = () => {
         </section>
         <section className="container">
           <div className="flex flex-col tablet:flex-row-reverse  tablet:-mx-8 tablet:py-8 items-center ">
-            <div className="w-full tablet:md:w-5/12 md:mx-8 mb-6 pl-4">
-              <div className="w-[355px] tablet:w-[340px] h-[380px] tablet:h-[400px] relative">
+           
+              <div className="w-[335px] tablet:w-[500px] h-[380px] tablet:h-[400px] relative">
                 <Image
                   className="rounded-lg"
                   alt="img"
@@ -51,7 +51,7 @@ const About = () => {
                 objectFit="fill"
                 ></Image>
               </div>
-            </div>
+              <div className="w-full tablet:md:w-5/12 mx-8 py-10 ">
             <div className="dark:text-white text-soDarkGrey">
               <p className="mb-[1rem] font-roboto">
                 I have always loved technology. I was interested in technology
@@ -76,20 +76,20 @@ const About = () => {
                 satisfied and making them more likely to return as customers.
               </p>
             </div>
+            </div>
           </div>
         </section>
         <section className="container">
           <div className=" flex flex-col tablet:flex-row tablet:-mx-8 py-8 items-center">
-            <div className="w-[355px] tablet:w-[400px] h-[400px] relative">
+            <div className="w-[335px] tablet:w-[400px] h-[380px] relative">
               <Image
                 className="rounded-lg"
                 alt="img"
                 src="/images/skills.png"
-                height={400}
-                width={400}
+                layout="fill"
               />
             </div>
-            <div className="w-full tablet:w-7/12 tablet:mx-8 dark:text-white text-soDarkGrey">
+            <div className="w-full tablet:w-7/12 mx-8 py-10  dark:text-white text-soDarkGrey">
               <p className="mb-[1rem] font-roboto">
               I am currently working on a project that is growing and I am improving myself day by day. I think that when this project is finalized, I will have crossed an important threshold.
 
