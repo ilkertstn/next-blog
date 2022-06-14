@@ -4,13 +4,13 @@ import Title from "@components/Title";
 import BigCard from "@components/BigCard";
 import Card from "@components/Card";
 import { BlogData } from "@lib/blog";
-import Link from "next/link";
 import Footer from "@components/Footer";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion"
 const Blog = () => {
   const secondPost = BlogData[0];
   console.log(BlogData);
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className="dark:bg-darkGrey bg-slate100">
       <div className="dark:bg-darkGrey bg-slate100 h-[460px]">
@@ -21,7 +21,13 @@ const Blog = () => {
       </div>
       <div className="container">
         <div>
-          <div  onClick={()=>router.push(`/blog/${secondPost.slug}`)} className="flex justify-start tablet:pt-40 mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   ">
+        <motion.div initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{delay:0.5}}>
+          <div
+            onClick={() => router.push(`/blog/${secondPost.slug}`)}
+            className="flex justify-start tablet:pt-40 mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   "
+          >
             <BigCard
               title={secondPost.title}
               time={` ${secondPost.time} ago`}
@@ -31,9 +37,10 @@ const Blog = () => {
               image={secondPost.image}
             />
           </div>
+          </motion.div>
         </div>
 
-        <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center drop-shadow-2xl rounded-3xl ">
+        <div className="flex flex-col tablet:flex-row w-full flex-wrap justify-center align-center drop-shadow-2xl rounded-3xl pb-20 ">
           {BlogData.slice(1).map((blog, index) => (
             <Card
               key={index}
@@ -48,7 +55,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="pt-10">
+      <div >
         <Footer />
       </div>
     </div>
