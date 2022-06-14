@@ -12,7 +12,7 @@ import {
   AiOutlineContacts,
 } from "react-icons/ai";
 import { MdNightlight, MdLightMode } from "react-icons/md";
-import { GiSkills } from "react-icons/gi";
+import { FaBloggerB } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -23,8 +23,8 @@ const Navbar = () => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   return (
-    <div className="dark:shadow-2xl shadow-xl">
-      <nav className="bg-slate100 p-[30px] tablet:p-10  tablet:flex justify-between dark:bg-darkGrey">
+    <div className="">
+      <nav className="bg-slate100 p-[30px] tablet:p-10 tablet:flex justify-between dark:bg-darkGrey">
         <div className="flex flex-row justify-between ">
           <span
             onClick={() => router.push("/")}
@@ -53,11 +53,11 @@ const Navbar = () => {
             </motion.div>
           </span>
 
-          <span className="pt-8 text-soDarkGrey dark:text-white cursor-pointer tablet:hidden block">
+          <span className="pt-8 text-soDarkGrey dark:text-white cursor-pointer lg-tablet:hidden block">
             <AiOutlineMenu onClick={handleNav} size={20} />
           </span>
         </div>
-        <ul className="tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium  hidden cursor-pointer  text-white">
+        <ul className="lg-tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium hidden   cursor-pointer  text-white">
           <motion.div
             initial={{ y: -250 }}
             animate={{ y: -0 }}
@@ -77,23 +77,24 @@ const Navbar = () => {
             animate={{ y: -0 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 50 }}
           >
-            <Link passHref href="/about">
+            <Link passHref href="/blog">
               <li className="mx-4 my-6 tablet:my-0 dark:hover:bg-soDarkGrey hover:bg-whiteChange dark:hover:text-white hover:text-blackChange px-6 py-3 rounded-xl dark:text-white text-soDarkGrey">
-                About
+                Blog
               </li>
             </Link>
           </motion.div>
           <motion.div
             initial={{ y: -250 }}
             animate={{ y: -0 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 50 }}
+            transition={{ delay: 0.4, type: "spring", stiffness: 50 }}
           >
-            <Link passHref href="/skills">
-              <li className="mx-4 my-6 tablet:my-0 dark:hover:bg-soDarkGrey hover:bg-whiteChange dark:hover:text-white hover:text-blackChange px-6 py-3 rounded-xl text-soDarkGrey dark:text-white">
-                Skills
+            <Link passHref href="/about">
+              <li className="mx-4 my-6 tablet:my-0 dark:hover:bg-soDarkGrey hover:bg-whiteChange dark:hover:text-white hover:text-blackChange px-6 py-3 rounded-xl dark:text-white text-soDarkGrey">
+                About
               </li>
             </Link>
           </motion.div>
+
           <motion.div
             initial={{ y: -250 }}
             animate={{ y: -0 }}
@@ -125,14 +126,14 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 z-20"
+            ? "fixed left-0 top-0 w-full h-full bg-black/70 z-20"
             : " "
         }
       >
         <div
           className={
             nav
-              ? " fixed left-0 top-0 w-[75%] screens:w-[60%] tablet:w-[45%] h-screen bg-slate100 dark:bg-darkGrey p-10 ease-in duration-500"
+              ? " fixed left-0 top-0 w-[75%] screens:w-[60%] tablet:w-[45%] h-full bg-slate100 dark:bg-darkGrey p-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
@@ -173,6 +174,14 @@ const Navbar = () => {
                   </li>
                 </Link>
               </div>
+              <div className="flex items-center space-x-4">
+                <FaBloggerB size={30} />
+                <Link passHref href="/skills  ">
+                  <li className="py-4 text-small cursor-pointer w-15 hover:underline">
+                    Blog
+                  </li>
+                </Link>
+              </div>
               <div className="flex items-center space-x-4 ">
                 <FaUserAstronaut size={30} />
                 <Link passHref href="/about">
@@ -181,14 +190,7 @@ const Navbar = () => {
                   </li>
                 </Link>
               </div>
-              <div className="flex items-center space-x-4">
-                <GiSkills size={30} />
-                <Link passHref href="/skills  ">
-                  <li className="py-4 text-small cursor-pointer w-15 hover:underline">
-                    Skills
-                  </li>
-                </Link>
-              </div>
+              
               <div className="flex items-center space-x-4">
                 <AiOutlineContacts size={30} />
                 <Link passHref href="/contact">

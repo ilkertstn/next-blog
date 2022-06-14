@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="dark:bg-darkGrey bg-white w-full">
-      <Navbar />
       <main className="pb-20">
         <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
           <div className="dark:text-white text-soDarkGrey text-center m pt-28">
@@ -105,8 +104,8 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <div className=" flex flex-col tablet:flex-row tablet:-mx-8 py-8 items-center">
-              <div className="w-[335px] tablet:w-[400px] h-[380px] relative">
+            <div className=" flex flex-col tablet:flex-row tablet:-mx-8 py-8 items-center ">
+              <div className="w-[300  px] tablet:w-[400px] h-[380px] relative">
                 <Image
                   className="rounded-lg"
                   alt="img"
@@ -130,7 +129,6 @@ const About = () => {
           </motion.div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

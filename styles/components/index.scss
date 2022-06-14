@@ -13,12 +13,14 @@
   display: none;
   visibility: hidden;
 }
+
 .mapboxgl-ctrl-bottom-right {
   .mapboxgl-ctrl-group {
     display: block;
     visibility: visible;
   }
 }
+
 .opaq {
   opacity: 0.5;
 }
@@ -36,13 +38,29 @@ html:focus-within {
   cursor: pointer;
 }
 
-
-.blogdetail{
-  
+.blogdetail {
   display: flex;
   flex-direction: column;
- 
- 
-  }
- 
 
+  p {
+    color: pink !important;
+  }
+}
+
+.gradient_text {
+  background: #008080;
+  background: -webkit-linear-gradient(to left, #008080 0%, #05C1FF 50%, #005757 100%);
+  background: -moz-linear-gradient(to left, #008080 0%, #05C1FF 50%, #005757 100%);
+  background: linear-gradient(to left, #008080 0%, #05C1FF 50%, #005757 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+} 
+
+.contact_button{
+  background : linear-gradient(90deg, #008080, #05C1FF)
+  
+}
+.contact_button:hover{
+  background : linear-gradient(90deg, #05C1FF, #008080)  
+}

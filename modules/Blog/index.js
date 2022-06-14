@@ -14,7 +14,7 @@ const Blog = () => {
   return (
     <div className="dark:bg-darkGrey bg-slate100">
       <div className="dark:bg-darkGrey bg-slate100 h-[460px]">
-        <Navbar />
+       
         <div className="pt-30">
           <Title title="Blog" />
         </div>
@@ -26,7 +26,7 @@ const Blog = () => {
             transition={{delay:0.5}}>
           <div
             onClick={() => router.push(`/blog/${secondPost.slug}`)}
-            className="flex justify-start tablet:pt-40 mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   "
+            className="flex justify-start  mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   "
           >
             <BigCard
               title={secondPost.title}
@@ -55,9 +55,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div >
-        <Footer />
-      </div>
+      
     </div>
   );
 };

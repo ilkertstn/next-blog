@@ -24,8 +24,8 @@ const Contact = () => {
   };
   return (
     <div className="dark:bg-darkGrey bg-white">
-      <Navbar />
-      <div className="container flex flex-col items-center mb-20 pt-20 pb-20">
+     
+      <div className="container flex flex-col items-center pt-20 pb-20">
         <div className="w-full pl-[60px] tablet:pl-60">
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
             <h1 className="dark:text-white text-soDarkGrey font-semibold">
@@ -84,7 +84,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <BigStore />
+  
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="flex flex-col text-center ">
         <div className="flex flex-col tablet:flex-row columns-3 pt-0 tablet:pt-20 justify-center tablet:space-x-36 ">
           <div className="tablet:text-left">
-            <div className="text-white font-roboto font-bold h2 w-full tablet:w-full tablet:pl-8  ">
+            <div className="text-white font-roboto font-bold h2 w-full tablet:w-full tablet:pl-8 pt-4 lg-tablet:pt-0 ">
               <Image
                 className="rounded-full"
                 alt="img"
@@ -63,7 +63,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex flex-row justify-center space-x-18 pt-12">
+          <div className="flex flex-row justify-center space-x-18 pt-6 lg-tablet:pt-5">
             <div className="flex flex-col tablet:space-y-3 ">
               <span className=" font-roboto font-bold h5 dark:text-white text-soDarkGrey tablet:self-baseline	">
                 Quick Links
