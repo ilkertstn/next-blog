@@ -22,10 +22,10 @@ const Footer = () => {
 
   return (
     <div className="dark:bg-soDarkGrey bg-slate100 max-w-screen-md tablet:h-[screen]">
-      <div className="flex flex-col text-center ">
+      <div className="flex flex-col  ">
         <div className="flex flex-col tablet:flex-row columns-3 pt-0 tablet:pt-20 justify-center tablet:space-x-36 ">
           <div className="tablet:text-left">
-            <div className="text-white font-roboto font-bold h2 w-full tablet:w-full tablet:pl-8 pt-4 lg-tablet:pt-0 ">
+            <div className="text-white font-roboto font-bold h2 w-full pl-7 pt-4 lg-tablet:pt-0 ">
               <Image
                 className="rounded-full"
                 alt="img"
@@ -74,26 +74,28 @@ const Footer = () => {
                     Home
                   </button>
                 </Link>
-                <Link passHref href="/about">
+                <Link passHref href="/blog">
                   <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
-                    About
+                    Blog
                   </button>
                 </Link>
+                <Link passHref href="/about">
                 <button className="font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
-                  Skills
+                  About
                 </button>
+                </Link>
                 <Link href="/contact" passHref>
-                  <button className="hidden mobile:block font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
+                  <button className=" font-roboto dark:text-whiteChange text-soDarkGrey pt-[18px] tablet:pt-2 tablet:self-baseline dark:hover:text-yellow dark:focus:text-yellow hover:text-yellow hover:underline focus:text-yellow font-medium">
                     Contact
                   </button>
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col space-y-0 tablet:space-y-3 ">
-              <span className=" font-roboto font-bold h5 dark:text-white text-soDarkGrey tablet:self-baseline">
+            <div className="flex flex-col space-y-0 tablet:space-y-3  ">
+              <span className=" font-roboto font-bold h5  tablet:pt-9 lg-tablet:pt-0 dark:text-white text-soDarkGrey tablet:self-baseline">
                 Contact
               </span>
-              <div className="flex flex-col pt-0 tablet:pt-5  space-y-0 tablet:space-y-2">
+              <div className="flex flex-col pt-0 tablet:pt-5 space-y-0 tablet:space-y-2">
                 <Link
                   passHref
                   href="https://tr.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a"
@@ -116,10 +118,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center pt-8 tablet:pt-12 ">
-          <hr className="hidden mobile:block dark:text-whiteChange text-soDarkGrey w-[1200px] "></hr>
+        <div className="flex justify-center lg-tablet:pt-8 tablet:pt-12 ">
+          <hr className="hidden mobile:block dark:text-whiteChange text-soDarkGrey tablet:w-[720px] lg-tablet:w-[1200px] "></hr>
         </div>
-        <div className="flex justify-start mx-[72px] pt-8 dark:text-white text-soDarkGrey font-roboto">
+        <div className="flex justify-center mx-[72px] pt-8 dark:text-white text-soDarkGrey font-roboto">
           © 2022 İlker Taştan
         </div>
       </div>

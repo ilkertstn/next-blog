@@ -53,7 +53,7 @@ const Navbar = () => {
             </motion.div>
           </span>
 
-          <span className="pt-8 text-soDarkGrey dark:text-white cursor-pointer lg-tablet:hidden block">
+          <span className="pt-8 text-soDarkGrey  dark:text-white cursor-pointer lg-tablet:hidden block ">
             <AiOutlineMenu onClick={handleNav} size={20} />
           </span>
         </div>
@@ -125,9 +125,7 @@ const Navbar = () => {
 
       <div
         className={
-          nav
-            ? "fixed left-0 top-0 w-full h-full bg-black/70 z-20"
-            : " "
+          nav ? "fixed left-0 top-0 w-full h-full bg-black/70 z-20" : " "
         }
       >
         <div
@@ -176,7 +174,7 @@ const Navbar = () => {
               </div>
               <div className="flex items-center space-x-4">
                 <FaBloggerB size={30} />
-                <Link passHref href="/skills  ">
+                <Link passHref href="/blog  ">
                   <li className="py-4 text-small cursor-pointer w-15 hover:underline">
                     Blog
                   </li>
@@ -190,7 +188,7 @@ const Navbar = () => {
                   </li>
                 </Link>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <AiOutlineContacts size={30} />
                 <Link passHref href="/contact">

@@ -1,26 +1,24 @@
 import React from "react";
 import Image from "next/image";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="dark:bg-darkGrey bg-white w-full">
+    <div className="dark:bg-darkGrey bg-white w-full ">
       <main className="pb-20">
         <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
-          <div className="dark:text-white text-soDarkGrey text-center m pt-28">
-            <h4 className="my-6">Hi there!</h4>
+          <div className="dark:text-white text-soDarkGrey text-center pt-6 lg-tablet:pt-0 dark:bg-darkGrey space-y-6 lg-tablet:space-y-0">
+            <h4 className="lg-tablet:pt-20">Hi there!</h4>
             <h1 className="font-semibold mb-10">I&apos;m İlker Taştan</h1>
           </div>
         </motion.div>
-        <section className="container ">
+        <section className="container lg-tablet:pt-20">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="flex flex-col tablet:flex-row tablet:-mx-8 tablet:py-8 items-center">
+            <div className="flex flex-col tablet:flex-row tablet:-mx-3 tablet:py-8  tablet:container  items-center">
               <div className="w-[335px] tablet:w-[400px] h-[350px] tablet:h-[400px] relative ">
                 <Image
                   className="rounded-lg"
@@ -57,8 +55,8 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="flex flex-col tablet:flex-row-reverse  tablet:-mx-8 tablet:py-8 items-center ">
-              <div className="w-[335px] tablet:w-[500px] h-[380px] tablet:h-[400px] relative">
+            <div className="flex flex-col tablet:flex-row-reverse  tablet:-mx-3 tablet:container tablet:py-8 items-center ">
+              <div className="w-[335px] tablet:w-[700px] h-[350px] tablet:h-[460px] relative">
                 <Image
                   className="rounded-lg"
                   alt="img"
@@ -104,8 +102,8 @@ const About = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <div className=" flex flex-col tablet:flex-row tablet:-mx-8 py-8 items-center ">
-              <div className="w-[300  px] tablet:w-[400px] h-[380px] relative">
+            <div className=" flex flex-col tablet:flex-row tablet:-mx-3 tablet:container lg-tablet:py-8 items-center">
+              <div className="w-[335px] lg-tablet:w-[400px] h-[380px] relative">
                 <Image
                   className="rounded-lg"
                   alt="img"

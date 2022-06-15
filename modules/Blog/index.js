@@ -13,9 +13,9 @@ const Blog = () => {
   const router = useRouter();
   return (
     <div className="dark:bg-darkGrey bg-slate100">
-      <div className="dark:bg-darkGrey bg-slate100 h-[460px]">
+      <div className="dark:bg-darkGrey bg-slate100 h-[300px] lg-tablet:h-[460px]">
        
-        <div className="pt-30">
+        <div className="pt-14 lg-tablet:pt-30">
           <Title title="Blog" />
         </div>
       </div>
@@ -26,11 +26,11 @@ const Blog = () => {
             transition={{delay:0.5}}>
           <div
             onClick={() => router.push(`/blog/${secondPost.slug}`)}
-            className="flex justify-start  mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   "
+            className="flex lg-tablet:justify-start justify-center mt-[-120px] pl-0 tablet:pl-10 pb-16  rounded-3xl   "
           >
             <BigCard
               title={secondPost.title}
-              time={` ${secondPost.time} ago`}
+              time={`Posted ${secondPost.time}`}
               user={`By ${secondPost.author}`}
               body={secondPost.description}
               read="Read More"
