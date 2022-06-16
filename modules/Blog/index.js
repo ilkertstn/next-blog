@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "@components/Navbar";
 import Title from "@components/Title";
 import BigCard from "@components/BigCard";
 import Card from "@components/Card";
 import { BlogData } from "@lib/blog";
-import Footer from "@components/Footer";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion"
 const Blog = () => {

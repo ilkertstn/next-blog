@@ -19,7 +19,7 @@ const About = () => {
             transition={{ delay: 0.5 }}
           >
             <div className="flex flex-col tablet:flex-row tablet:-mx-3 tablet:py-8  tablet:container  items-center">
-              <div className="w-[335px] tablet:w-[400px] h-[350px] tablet:h-[400px] relative ">
+              <div className="w-full tablet:w-[400px] h-[300px] lg-tablet:h-[380px] relative ">
                 <Image
                   className="rounded-lg"
                   alt="img"
@@ -56,7 +56,7 @@ const About = () => {
             transition={{ delay: 0.5 }}
           >
             <div className="flex flex-col tablet:flex-row-reverse  tablet:-mx-3 tablet:container tablet:py-8 items-center ">
-              <div className="w-[335px] tablet:w-[700px] h-[350px] tablet:h-[460px] relative">
+              <div className="w-full tablet:w-[600px] h-[350px] lg-tablet:h-[420px] relative">
                 <Image
                   className="rounded-lg"
                   alt="img"
@@ -103,7 +103,7 @@ const About = () => {
             transition={{ delay: 0.5 }}
           >
             <div className=" flex flex-col tablet:flex-row tablet:-mx-3 tablet:container lg-tablet:py-8 items-center">
-              <div className="w-[335px] lg-tablet:w-[400px] h-[380px] relative">
+              <div className="w-full lg-tablet:w-[400px] h-[300px] lg-tablet:h-[380px]  relative">
                 <Image
                   className="rounded-lg"
                   alt="img"

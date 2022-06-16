@@ -28,7 +28,7 @@ const Card = ({ title, time, body, read, image, slug }) => {
         </div>
         <div
           onClick={() => router.push(`/blog/${slug}`)}
-          className="font-roboto mt-2.5 pt-2 h6 w-[17rem] h-auto tablet:h-[50px] dark:text-white text-soDarkGrey cursor-pointer "
+          className="font-roboto mt-2.5 pt-2 h6 w-[100%] h-auto tablet:h-[50px] dark:text-white text-soDarkGrey cursor-pointer "
         >
           {body.length > 200 ? `${body.slice(0, 150)}...` : body}
         </div>

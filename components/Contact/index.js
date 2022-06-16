@@ -1,5 +1,3 @@
-import BigStore from "@components/Footer";
-import Navbar from "@components/Navbar";
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
@@ -28,9 +26,9 @@ const Contact = () => {
       <div className="container flex flex-col items-center pt-20 pb-20">
         <div className="w-full pl-[60px] tablet:pl-60">
           <motion.div initial={{ y: -250 }} animate={{ y: -10 }}>
-            <h1 className="dark:text-white text-soDarkGrey font-semibold">
+            <span className="dark:text-white text-soDarkGrey font-semibold h2 tablet:h1">
               Contact
-            </h1>
+            </span>
 
             <p className="text-red200 font-roboto font-medium">
               LET&apos;S TALK

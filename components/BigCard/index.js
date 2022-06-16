@@ -4,8 +4,8 @@ import { BsArrowRight } from "react-icons/bs";
 
 const BigCard = ({ title, body, user, time, read, image }) => {
   return (
-    <div className="flex flex-col lg-tablet:flex-row justify-center pt-8 tablet:pt-0 min-h-[300px] group ">
-      <div className="flex w-full lg-tablet:min-h-[auto] lg-tablet:w-[500px] lg-tablet:justify-center relative min-h-[300px] lg-tablet:group-hover:scale-105 ease-in duration-300 drop-shadow-2xl cursor-pointer">
+    <div className="flex flex-col lg-laptop:flex-row justify-center pt-8 tablet:pt-0 min-h-[300px] group ">
+      <div className="flex w-full lg-laptop:min-h-full lg-laptop:w-[500px] lg-laptop:justify-center relative min-h-[300px] lg-laptop:group-hover:scale-105 ease-in duration-300 drop-shadow-2xl cursor-pointer">
         <Image
           className="rounded-xl"
           src={image}

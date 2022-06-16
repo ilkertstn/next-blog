@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div className="">
       <nav className="bg-slate100 p-[30px] tablet:p-10 tablet:flex justify-between dark:bg-darkGrey">
-        <div className="flex flex-row justify-between ">
+        <div className="flex flex-row justify-between w-[100%] ">
           <span
             onClick={() => router.push("/")}
             className="h5 font-roboto font-medium cursor-pointer text-white "
@@ -46,7 +46,7 @@ const Navbar = () => {
                   ></Image>
                 </div>
 
-                <div className="text-soDarkGrey p-7 dark:text-white w-[200px]">
+                <div className="text-soDarkGrey p-7 dark:text-white w-[100%]">
                   İlker Taştan
                 </div>
               </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <AiOutlineMenu onClick={handleNav} size={20} />
           </span>
         </div>
-        <ul className="lg-tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium hidden   cursor-pointer  text-white">
+        <ul className="lg-tablet:flex tablet:items-center font-roboto space-x-0 tablet:space-x-10 tablet:pl-14  font-medium sm-mobile:hidden block cursor-pointer  text-white">
           <motion.div
             initial={{ y: -250 }}
             animate={{ y: -0 }}
@@ -132,7 +132,7 @@ const Navbar = () => {
           className={
             nav
               ? " fixed left-0 top-0 w-[75%] screens:w-[60%] tablet:w-[45%] h-full bg-slate100 dark:bg-darkGrey p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+              : "fixed left-[-120%] top-0 p-10 ease-in duration-500"
           }
         >
           <div>

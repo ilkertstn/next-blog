@@ -1,31 +1,39 @@
 @layer components {
+
   h1,
   .h1 {
     @apply font-roboto text-h1 leading-lg;
   }
+
   h2,
   .h2 {
     @apply font-roboto text-h2 leading-lg;
   }
+
   h3,
   .h3 {
     @apply font-roboto text-h3 leading-lg;
   }
+
   h4,
   .h4 {
     @apply font-roboto text-h4 leading-lg;
   }
+
   h5,
   .h5 {
     @apply font-roboto text-h5 leading-xl;
   }
+
   h6,
   .h6 {
     @apply font-roboto text-h6 leading-lg;
   }
+
   .body-copy {
     @apply font-roboto text-body-copy leading-xl;
   }
+
   .subtitle {
     @apply font-roboto text-subtitle leading-lg;
   }
@@ -37,17 +45,20 @@
   .body-small {
     @apply font-roboto text-body-small leading-xl;
   }
+
   .small {
     @apply font-roboto text-small leading-lg;
   }
+
   .extra-small {
     @apply font-roboto text-extra-small leading-lg;
   }
+
   .tiny {
     @apply font-roboto text-tiny leading-xl;
   }
+
   .headline {
     @apply font-roboto text-headline leading-lg;
   }
 }
-

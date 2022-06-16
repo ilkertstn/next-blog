@@ -1,29 +1,6 @@
 @import "fonts";
 @import "typography";
-@import "buttons";
-@import "inputs";
-@import "swiper";
-@import "half";
-@import "custom";
 
-.mapbox-improve-map,
-.mapboxgl-ctrl,
-.mapboxgl-ctrl-attrib,
-.mapboxgl-ctrl-logo {
-  display: none;
-  visibility: hidden;
-}
-
-.mapboxgl-ctrl-bottom-right {
-  .mapboxgl-ctrl-group {
-    display: block;
-    visibility: visible;
-  }
-}
-
-.opaq {
-  opacity: 0.5;
-}
 
 html {
   scroll-behavior: smooth;
@@ -33,10 +10,7 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-.swiper-slide-next,
-.swiper-slide-prev {
-  cursor: pointer;
-}
+
 
 .blogdetail {
   display: flex;

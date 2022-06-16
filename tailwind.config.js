@@ -40,7 +40,7 @@ module.exports = {
     },
     colors: {
       black: "#000000",
-      red200: "#C24C20",
+      red200: "#E15120",
       red300:"#BF360C",
       lightGrey:"#e5e7eb",
       grey: "rgba(119, 131, 143, 1)",
