@@ -22,7 +22,7 @@ const Landing = () => {
             animate={{ y: -10 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 50 }}
           >
-            <span className="gradient_text  font-bold w-[100%] h2 tablet:h1 ">
+            <span className="gradient_text  font-bold  h2 tablet:h1 ">
               I Am <br></br> Frontend Developer
               </span> 
           </motion.div>
@@ -33,7 +33,6 @@ const Landing = () => {
           >
             <p>
               I am a Frontend Developer. I create beautiful websites your users
-              
               will love. I am a technology enthusiast.
             </p>
           </motion.div>
