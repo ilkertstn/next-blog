@@ -5,7 +5,7 @@ const FooterItem2 = () => {
   return (
     <ul className='space-y-7 z-10'>
         <li className='font-bold'>Quick Links</li>
-        <Link href="/blog" passHref>
+        <Link href="/" passHref>
         <li className='cursor-pointer hover:text-yellow hover:underline'>Home</li>
         </Link>
         <Link passHref href="/blog">

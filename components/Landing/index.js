@@ -59,7 +59,7 @@ const Landing = () => {
             >
               <Link
                 passHref
-                href="https://www.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a/"
+                href="https://github.com/ilkertstn"
               >
                 <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-110 ease-in duration-200 bg-black text-white dark:bg-white dark:text-black w-10">
                   <FaGithub />
@@ -73,7 +73,7 @@ const Landing = () => {
             >
               <Link
                 passHref
-                href="https://www.linkedin.com/in/ilker-ta%C5%9Ftan-90402217a/"
+                href="mailto:ilkertstn@gmail.com"
               >
                 <div className="rounded-full shadow-lg  p-3 cursor-pointer hover:scale-110 ease-in duration-200 bg-red200 text-white w-10">
                   <AiOutlineMail />
