@@ -22,9 +22,9 @@ const Landing = () => {
             animate={{ y: -10 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 50 }}
           >
-            <h1 className="gradient_text font-bold ">
+            <p className="gradient_text font-bold h2 mobile:h1 ">
               I Am  Frontend Developer
-              </h1> 
+              </p> 
           </motion.div>
           <motion.div
             initial={{ y: -1000 }}
