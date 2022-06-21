@@ -36,7 +36,7 @@ const Navbar = () => {
               transition={{ delay: 0.2, type: "spring", stiffness: 50 }}
             >
               <div className="flex items-center">
-                <div className="relative w-[65px] h-[65px]">
+                <div className="relative w-[80px] h-[55px]">
                   <Image
                     className="rounded-full"
                     alt="img"

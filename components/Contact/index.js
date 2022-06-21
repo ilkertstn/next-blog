@@ -1,8 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Contact = () => {
+
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -12,7 +18,8 @@ const Contact = () => {
       .sendForm("gmail", "template_417bzjf", e.target, "Th4CoWsKPQicsNv80")
       .then(
         (result) => {
-          console.log(result.text);
+          setSuccess(true)
+       
         },
         (error) => {
           console.log(error.text);
@@ -71,6 +78,7 @@ const Contact = () => {
                 name="message"
               ></input>
             </div>
+            {success?(<div></div> ):
             <div className="col-8 form-group mx-auto">
               <input
                 type="submit"
@@ -78,9 +86,23 @@ const Contact = () => {
                 value="Send Message"
               ></input>
             </div>
+            }
           </form>
         </motion.div>
+        
+        {success ? (
+          <div>
+          <div className="flex flex-col w-full align-center  mt-5">  
+            <div className="uppercase font-roboto font-medium pt-5">
+            Thanks for contacting
+            </div>
+          <div className="flex justify-center">  <Image alt="" src={"/images/tick.png"} width={"100px"}
+          height={"100px"}></Image></div>
+          </div>
+          </div>
+        ) : ''}
       </div>
+      
 
   
     </div>

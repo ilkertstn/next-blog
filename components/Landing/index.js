@@ -55,7 +55,7 @@ const Landing = () => {
             <motion.div
               initial={{ y: -1000 }}
               animate={{ y: -10 }}
-              transition={{ delay: 1, type: "spring", stiffness: 50 }}
+              transition={{ delay: 0.8, type: "spring", stiffness: 50 }}
             >
               <Link
                 passHref
@@ -69,7 +69,7 @@ const Landing = () => {
             <motion.div
               initial={{ y: -1000 }}
               animate={{ y: -10 }}
-              transition={{ delay: 1.2, type: "spring", stiffness: 50 }}
+              transition={{ delay: 0.8, type: "spring", stiffness: 50 }}
             >
               <Link
                 passHref
@@ -85,7 +85,7 @@ const Landing = () => {
             <motion.div
               initial={{ y: -1000 }}
               animate={{ y: -10 }}
-              transition={{ delay: 1.4, type: "spring", stiffness: 50 }}
+              transition={{ delay: 1, type: "spring", stiffness: 50 }}
               className="flex"
             >
               <button className="contact_button rounded-2xl  pl-4 pr-4 pt-2 pb-2 text-white  ">
@@ -98,16 +98,16 @@ const Landing = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.7 }}
+            transition={{ delay: 1.2 }}
           >
-            <div className="relative tablet:w-[425px] lg-tablet:w-[770px]  tablet:h-[550px] lg-tablet:h-[800px]">
+            <div className="relative tablet:w-[425px] lg-tablet:w-[770px]   tablet:h-[550px] lg-tablet:h-[800px]">
               <Image
                 alt=""
                 src="/images/ai.png"
                 layout="fill"
                 objectFit="cover"
               ></Image>
-            </div>
+            </div>  
           </motion.div>
         </div>
       </div>
